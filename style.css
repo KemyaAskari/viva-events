@@ -1,0 +1,564 @@
+/* =====================================================
+   GLOBAL SETTINGS
+===================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f8f8f8;
+  color: #222;
+  line-height: 1.7;
+}
+
+/* GOLD THEME COLORS */
+:root {
+  --gold: #d4af37;
+  --gold-light: #ffda56;
+  --dark: #222;
+  --white: #fff;
+}
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+.navbar {
+  width: 100%;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #eee;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 45px;
+}
+
+.brand-name {
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: var(--gold);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--gold);
+}
+
+/* Mobile Menu */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 32px;
+  cursor: pointer;
+  color: var(--dark);
+}
+
+/* =====================================================
+   HERO SECTION
+===================================================== */
+.hero {
+  background: url("image/wedding l.jpeg") center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.55);
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 900px;
+  text-align: center;
+  color: var(--white);
+}
+
+.viva-heading-3d {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: var(--white);
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 4px rgb(0,0,0),
+               0 0 10px rgba(212,175,55,0.4);
+  transition: 0.3s;
+}
+
+.viva-heading-3d:hover {
+  color: var(--gold);
+  transform: translateY(-5px);
+  text-shadow: 0 0 14px rgba(212,175,55,0.8);
+}
+
+.hero h1 {
+  color: var(--white);
+  font-size: 2.6rem;
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
+.hero p {
+  color: #eee;
+  margin: 10px 0;
+}
+
+.hero-highlights {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin: 20px 0;
+}
+
+.highlight {
+  text-align: center;
+  color: #eee;
+}
+
+.highlight i {
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+  color: var(--gold);
+}
+
+/* Buttons */
+.btn-primary,
+.btn-secondary {
+  padding: 12px 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.3s ease;
+  margin: 0 10px;
+  border: 2px solid var(--gold);
+  background: var(--gold);
+  color: var(--dark);
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  background: var(--white);
+  color: var(--gold);
+}
+
+/* =====================================================
+   3D BOX CONTAINER
+===================================================== */
+.box-3d {
+  background: var(--white);
+  padding: 40px;
+  margin: 60px auto;
+  width: 90%;
+  max-width: 1100px;
+  border-radius: 18px;
+  border-top: 4px solid var(--gold);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.10);
+  transition: 0.3s ease;
+}
+
+.box-3d:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* =====================================================
+   GLOBAL HEADINGS (Luxury)
+===================================================== */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 2px;
+  color: var(--dark);
+  transition: 0.3s ease;
+}
+
+h1:hover, h2:hover, h3:hover {
+  color: var(--gold);
+  text-shadow: 0 0 12px rgba(212,175,55,0.5);
+}
+
+/* =====================================================
+   SERVICES SECTION
+===================================================== */
+.services {
+  padding: 50px 20px;
+}
+
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: var(--white);
+  padding: 25px;
+  border-radius: 14px;
+  border-left: 4px solid var(--gold);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-left-color: var(--gold-light);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+.card ul li {
+  margin-bottom: 6px;
+  position: relative;
+  padding-left: 18px;
+}
+
+.card ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--gold);
+}
+
+/* =====================================================
+   GALLERY
+===================================================== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap: 15px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* =====================================================
+   CONTACT SECTION
+===================================================== */
+.contact {
+  padding: 60px 20px;
+  background: #f8f8f8;
+}
+
+.hidden-info {
+  display: none;
+  margin: 15px 0;
+  text-align: left;
+}
+
+.contact-buttons {
+  margin-top: 20px;
+}
+
+.contact-buttons button {
+  margin: 10px;
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-weight: 700;
+  background: var(--gold);
+  color: var(--dark);
+  border: 2px solid var(--gold);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-buttons button:hover {
+  background: var(--white);
+  color: var(--gold);
+}
+
+.inquiry-form {
+  display: none;
+  margin-top: 30px;
+}
+
+.inquiry-form input,
+.inquiry-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+
+.inquiry-form button {
+  margin-top: 15px;
+  padding: 12px 25px;
+  border-radius: 50px;
+  background: var(--gold);
+  color: var(--dark);
+  border: 2px solid var(--gold);
+  font-weight: 700;
+}
+
+.inquiry-form button:hover {
+  background: var(--white);
+  color: var(--gold);
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: rgba(255,255,255,0.9);
+  border-top: 1px solid #ddd;
+  backdrop-filter: blur(5px);
+}
+
+.social-icons a {
+  margin: 0 12px;
+  font-size: 1.4rem;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: var(--gold);
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 75px;
+    right: 0;
+    background: var(--white);
+    width: 220px;
+    padding: 20px;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .hero {
+    height: auto;
+    padding: 120px 20px 40px;
+  }
+
+  .hero-overlay {
+    padding: 25px;
+  }
+
+  .service-cards {
+    grid-template-columns: 1fr;
+  }
+}
+/* ============================
+   CONTACT SECTION – LUXURY GOLD
+============================ */
+.contact {
+  padding: 80px 20px;
+  background: #f8f5f0;
+  display: flex;
+  justify-content: center;
+}
+
+.contact .box-3d {
+  background: #ffffff;
+  padding: 45px 40px;
+  border-radius: 22px;
+  max-width: 850px;
+  width: 100%;
+  box-shadow: 0px 12px 35px rgba(0,0,0,0.12);
+  border-top: 5px solid #d4af37; /* Gold top edge */
+  transition: all 0.35s ease;
+}
+
+.contact .box-3d:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 18px 45px rgba(0,0,0,0.18);
+}
+
+/* Heading */
+.contact h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  color: #000;
+  letter-spacing: 2px;
+}
+
+/* Info lines */
+.contact p {
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+/* Hidden info */
+#hidden-info {
+  display: none;
+  margin-top: 18px;
+  text-align: left;
+  padding-left: 10px;
+  border-left: 4px solid #d4af37;
+}
+
+/* Contact buttons */
+.contact-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.btn-call,
+.btn-enquiry {
+  background: #d4af37;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 35px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-call:hover,
+.btn-enquiry:hover {
+  background: #b9952d;
+  transform: translateY(-3px);
+}
+
+/* Inquiry form */
+.inquiry-form {
+  background: #faf6ee;
+  padding: 25px 20px;
+  border-radius: 15px;
+  margin-top: 25px;
+  border: 1px solid #e5d7b8;
+  display: none;
+}
+
+.inquiry-form label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.inquiry-form input,
+.inquiry-form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+}
+
+.inquiry-form input:focus,
+.inquiry-form textarea:focus {
+  border-color: #d4af37;
+}
+
+.btn-submit {
+  background: #d4af37;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 35px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-submit:hover {
+  background: #b9952d;
+  transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .contact-buttons {
+    flex-direction: column;
+  }
+
+  .btn-call,
+  .btn-enquiry {
+    width: 100%;
+    justify-content: center;
+  }
+}
+/* -------- MOBILE NAV FIX -------- */
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .logo-area img {
+    width: 38px; /* smaller logo */
+  }
+
+  .brand-name {
+    font-size: 20px; /* smaller text */
+  }
+
+  .menu-toggle {
+    font-size: 26px; /* slightly smaller hamburger */
+  }
+
+  /* space below navbar */
+  header, .hero-section {
+    margin-top: 80px;
+  }
+}
