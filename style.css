@@ -59,6 +59,7 @@ body {
   color: var(--gold);
 }
 
+/* NAV LINKS */
 .nav-links {
   list-style: none;
   display: flex;
@@ -76,7 +77,7 @@ body {
   color: var(--gold);
 }
 
-/* Mobile Menu */
+/* Mobile Menu Button */
 .menu-toggle {
   display: none;
   background: none;
@@ -95,6 +96,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 80px; /* avoids navbar overlap */
 }
 
 .hero-overlay {
@@ -106,6 +108,7 @@ body {
   color: var(--white);
 }
 
+/* 3D Heading */
 .viva-heading-3d {
   font-family: 'Playfair Display', serif;
   font-size: 3rem;
@@ -136,6 +139,7 @@ body {
   margin: 10px 0;
 }
 
+/* HERO ICON HIGHLIGHTS */
 .hero-highlights {
   display: flex;
   justify-content: center;
@@ -154,7 +158,7 @@ body {
   color: var(--gold);
 }
 
-/* Buttons */
+/* HERO BUTTONS */
 .btn-primary,
 .btn-secondary {
   padding: 12px 25px;
@@ -175,7 +179,25 @@ body {
 }
 
 /* =====================================================
-   3D BOX CONTAINER
+   GLOBAL 3D HEADINGS
+===================================================== */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 2px;
+  color: var(--dark);
+  transition: 0.3s ease;
+}
+
+h1:hover, h2:hover, h3:hover {
+  color: var(--gold);
+  text-shadow: 0 0 12px rgba(212,175,55,0.5);
+}
+
+/* =====================================================
+   3D BOX SECTION WRAPPER
 ===================================================== */
 .box-3d {
   background: var(--white);
@@ -195,25 +217,7 @@ body {
 }
 
 /* =====================================================
-   GLOBAL HEADINGS (Luxury)
-===================================================== */
-h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 900;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 2px;
-  color: var(--dark);
-  transition: 0.3s ease;
-}
-
-h1:hover, h2:hover, h3:hover {
-  color: var(--gold);
-  text-shadow: 0 0 12px rgba(212,175,55,0.5);
-}
-
-/* =====================================================
-   SERVICES SECTION
+   SERVICES
 ===================================================== */
 .services {
   padding: 50px 20px;
@@ -276,130 +280,8 @@ h1:hover, h2:hover, h3:hover {
 }
 
 /* =====================================================
-   CONTACT SECTION
+   CONTACT
 ===================================================== */
-.contact {
-  padding: 60px 20px;
-  background: #f8f8f8;
-}
-
-.hidden-info {
-  display: none;
-  margin: 15px 0;
-  text-align: left;
-}
-
-.contact-buttons {
-  margin-top: 20px;
-}
-
-.contact-buttons button {
-  margin: 10px;
-  padding: 12px 25px;
-  border-radius: 50px;
-  font-weight: 700;
-  background: var(--gold);
-  color: var(--dark);
-  border: 2px solid var(--gold);
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.contact-buttons button:hover {
-  background: var(--white);
-  color: var(--gold);
-}
-
-.inquiry-form {
-  display: none;
-  margin-top: 30px;
-}
-
-.inquiry-form input,
-.inquiry-form textarea {
-  width: 100%;
-  padding: 12px;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  margin-top: 5px;
-}
-
-.inquiry-form button {
-  margin-top: 15px;
-  padding: 12px 25px;
-  border-radius: 50px;
-  background: var(--gold);
-  color: var(--dark);
-  border: 2px solid var(--gold);
-  font-weight: 700;
-}
-
-.inquiry-form button:hover {
-  background: var(--white);
-  color: var(--gold);
-}
-
-/* =====================================================
-   FOOTER
-===================================================== */
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: rgba(255,255,255,0.9);
-  border-top: 1px solid #ddd;
-  backdrop-filter: blur(5px);
-}
-
-.social-icons a {
-  margin: 0 12px;
-  font-size: 1.4rem;
-  transition: 0.3s;
-}
-
-.social-icons a:hover {
-  color: var(--gold);
-}
-
-/* =====================================================
-   RESPONSIVE
-===================================================== */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-links {
-    position: absolute;
-    top: 75px;
-    right: 0;
-    background: var(--white);
-    width: 220px;
-    padding: 20px;
-    display: none;
-    flex-direction: column;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-  }
-
-  .nav-links.open {
-    display: flex;
-  }
-
-  .hero {
-    height: auto;
-    padding: 120px 20px 40px;
-  }
-
-  .hero-overlay {
-    padding: 25px;
-  }
-
-  .service-cards {
-    grid-template-columns: 1fr;
-  }
-}
-/* ============================
-   CONTACT SECTION – LUXURY GOLD
-============================ */
 .contact {
   padding: 80px 20px;
   background: #f8f5f0;
@@ -414,41 +296,11 @@ h1:hover, h2:hover, h3:hover {
   max-width: 850px;
   width: 100%;
   box-shadow: 0px 12px 35px rgba(0,0,0,0.12);
-  border-top: 5px solid #d4af37; /* Gold top edge */
+  border-top: 5px solid #d4af37;
   transition: all 0.35s ease;
 }
 
-.contact .box-3d:hover {
-  transform: translateY(-6px);
-  box-shadow: 0px 18px 45px rgba(0,0,0,0.18);
-}
-
-/* Heading */
-.contact h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.2rem;
-  margin-bottom: 25px;
-  color: #000;
-  letter-spacing: 2px;
-}
-
-/* Info lines */
-.contact p {
-  font-size: 1.05rem;
-  margin-bottom: 8px;
-  color: #333;
-}
-
-/* Hidden info */
-#hidden-info {
-  display: none;
-  margin-top: 18px;
-  text-align: left;
-  padding-left: 10px;
-  border-left: 4px solid #d4af37;
-}
-
-/* Contact buttons */
+/* Buttons */
 .contact-buttons {
   display: flex;
   gap: 20px;
@@ -478,7 +330,7 @@ h1:hover, h2:hover, h3:hover {
   transform: translateY(-3px);
 }
 
-/* Inquiry form */
+/* Inquiry Form */
 .inquiry-form {
   background: #faf6ee;
   padding: 25px 20px;
@@ -502,12 +354,6 @@ h1:hover, h2:hover, h3:hover {
   border: 1px solid #ccc;
   margin-bottom: 15px;
   font-size: 1rem;
-  transition: border 0.3s ease;
-}
-
-.inquiry-form input:focus,
-.inquiry-form textarea:focus {
-  border-color: #d4af37;
 }
 
 .btn-submit {
@@ -525,9 +371,71 @@ h1:hover, h2:hover, h3:hover {
   background: #b9952d;
   transform: translateY(-3px);
 }
+/* Center location + office hours inside contact box */
+.contact .box-3d p {
+  text-align: center !important;
+}
 
-/* Responsive */
-@media (max-width: 600px) {
+/* Optional: center the text inside hidden-info if used */
+#hidden-info p {
+  text-align: center;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: rgba(255,255,255,0.9);
+  border-top: 1px solid #ddd;
+  backdrop-filter: blur(5px);
+}
+
+.social-icons a {
+  margin: 0 12px;
+  font-size: 1.4rem;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: var(--gold);
+}
+
+/* =====================================================
+   RESPONSIVE FIXES
+===================================================== */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 75px;
+    right: 0;
+    background: var(--white);
+    width: 220px;
+    padding: 20px;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .hero {
+    height: auto;
+    padding: 150px 20px 40px;
+  }
+
+  .service-cards {
+    grid-template-columns: 1fr;
+  }
+
   .contact-buttons {
     flex-direction: column;
   }
@@ -538,27 +446,171 @@ h1:hover, h2:hover, h3:hover {
     justify-content: center;
   }
 }
-/* -------- MOBILE NAV FIX -------- */
+/* =====================================================
+   RESPONSIVE – TABLETS & PHONES
+===================================================== */
+
+/* ---------- Large Tablets (769px–1024px) ---------- */
+@media (max-width: 1024px) {
+
+  .navbar {
+    padding: 12px 25px;
+  }
+
+  .brand-name {
+    font-size: 1.1rem;
+  }
+
+  .hero {
+    padding-top: 100px;
+    height: auto;
+  }
+
+  .viva-heading-3d {
+    font-size: 2.4rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero-overlay {
+    padding: 30px;
+  }
+
+  .gallery-grid img {
+    height: 220px;
+  }
+
+  .box-3d {
+    padding: 30px;
+  }
+}
+
+
+/* ---------- Small Tablets (481px–768px) ---------- */
 @media (max-width: 768px) {
 
   .navbar {
     padding: 10px 20px;
   }
 
-  .logo-area img {
-    width: 38px; /* smaller logo */
+  .logo {
+    width: 38px;
   }
 
   .brand-name {
-    font-size: 20px; /* smaller text */
+    font-size: 1rem;
   }
 
   .menu-toggle {
-    font-size: 26px; /* slightly smaller hamburger */
+    display: block;
+    font-size: 26px;
   }
 
-  /* space below navbar */
-  header, .hero-section {
-    margin-top: 80px;
+  .nav-links {
+    top: 68px;
+    width: 200px;
+  }
+
+  .viva-heading-3d {
+    font-size: 1.9rem;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+
+  .hero {
+    padding: 140px 20px 40px;
+  }
+
+  .service-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid img {
+    height: 200px;
+  }
+
+  .contact .box-3d {
+    padding: 30px 20px;
+  }
+
+  .btn-call,
+  .btn-enquiry {
+    font-size: 0.95rem;
+    padding: 12px 20px;
+  }
+}
+
+
+/* ---------- Mobile Phones (0px–480px) ---------- */
+@media (max-width: 480px) {
+
+  .navbar {
+    padding: 8px 15px;
+  }
+
+  .logo {
+    width: 32px;
+  }
+
+  .brand-name {
+    font-size: 0.9rem;
+  }
+
+  .nav-links {
+    top: 60px;
+    width: 180px;
+  }
+
+  .viva-heading-3d {
+    font-size: 1.5rem; /* small but still elegant */
+    letter-spacing: 1px;
+  }
+
+  .hero h1 {
+    font-size: 1.3rem;
+  }
+
+  .hero-overlay {
+    padding: 20px;
+  }
+
+  .hero p {
+    font-size: 0.88rem;
+  }
+
+  .hero-highlights {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .gallery-grid img {
+    height: 160px;
+  }
+
+  .box-3d {
+    margin: 30px auto;
+    padding: 20px 15px;
+  }
+
+  .contact .box-3d {
+    padding: 25px 20px;
+  }
+
+  .btn-call,
+  .btn-enquiry {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .inquiry-form {
+    padding: 20px;
   }
 }
