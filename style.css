@@ -1055,3 +1055,71 @@ h3:hover {
     font-size: 0.95rem;
   }
 }
+/* ============================
+   HERO CATEGORIES (Desktop)
+============================= */
+.hero-categories {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 55px;
+  margin: 35px 0;
+}
+
+.cat-item {
+  text-align: center;
+  transition: 0.3s;
+  width: 120px;           /* keeps perfect alignment */
+}
+
+.cat-icon {
+  font-size: 2.7rem;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.cat-item p {
+  font-family: "Playfair Display", serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.7px;
+}
+
+.cat-item:hover {
+  transform: translateY(-6px);
+}
+
+.cat-item:hover p {
+  color: var(--gold);
+}
+
+
+/* ============================
+   MOBILE (≤480px)
+============================= */
+@media (max-width: 480px) {
+
+  .hero-categories {
+    flex-direction: column;      /* stack vertical */
+    gap: 22px;                   /* perfect spacing */
+    margin: 25px 0;
+    align-items: center;         /* center each item */
+  }
+
+  .cat-item {
+    width: 100%;
+    max-width: 180px;            /* keeps same width for all */
+    text-align: center;
+  }
+
+  .cat-icon {
+    font-size: 2.4rem;           /* slightly smaller for phone */
+    margin-bottom: 6px;
+  }
+
+  .cat-item p {
+    font-size: 1.2rem;
+  }
+}
