@@ -985,76 +985,7 @@ h3:hover {
     font-size: 0.95rem;
   }
 }
-/* =====================================================
-   PERFECT WRAPPED HERO BUTTONS (PRIMARY + SECONDARY)
-===================================================== */
 
-.hero-buttons {
-  display: flex;
-  flex-direction: column;        /* stack clean */
-  justify-content: center;
-  align-items: center;
-  gap: 18px;
-  margin-top: 25px;
-  width: 100%;
-}
-
-/* Base for both buttons */
-.hero-buttons a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 100%;
-  max-width: 330px;             /* same width */
-  height: 58px;                 /* same height */
-
-  padding: 0 25px;
-  border-radius: 50px;
-  font-size: 1.05rem;
-  font-weight: 700;
-  text-decoration: none;
-  white-space: nowrap;
-  transition: 0.35s ease-in-out;
-}
-
-/* GOLD GRADIENT BUTTON */
-.btn-primary {
-  background: linear-gradient(135deg, #d4af37 0%, #e8c65f 50%, #b8961f 100%);
-  color: #fff;
-  box-shadow:
-    5px 5px 12px rgba(0,0,0,0.28),
-    -5px -5px 12px rgba(255,255,255,0.35);
-}
-
-.btn-primary:hover {
-  transform: translateY(-4px);
-  background: linear-gradient(135deg, #b8961f 0%, #d4af37 50%, #e8c65f 100%);
-}
-
-/* WHITE/GOLD SECONDARY BUTTON */
-.btn-secondary {
-  background: #ffffff;
-  color: #d4af37;
-  border: 3px solid #d4af37;
-  box-shadow:
-    5px 5px 12px rgba(0,0,0,0.18),
-    -5px -5px 12px rgba(255,255,255,0.45);
-}
-
-.btn-secondary:hover {
-  transform: translateY(-4px);
-  background: #fff6d6;
-}
-
-/* MOBILE */
-@media (max-width: 480px) {
-  .hero-buttons a {
-    max-width: 100%;
-    height: 55px;
-    font-size: 0.95rem;
-  }
-}
 /* ============================
    HERO CATEGORIES (Desktop)
 ============================= */
