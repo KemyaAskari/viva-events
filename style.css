@@ -1394,3 +1394,62 @@ html[data-theme="light"] .footer-social a{
 }
 
 
+/* =========================
+   MOBILE FIX — FINAL (SAFE)
+========================= */
+@media (max-width: 768px){
+
+  html, body{
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden;
+  }
+
+  /* Stop gold pseudo-elements causing overflow */
+  .panel-3d::before,
+  .panel-3d::after,
+  .terms-3d::before,
+  .terms-3d::after{
+    left:0;
+    transform:none;
+    width:100%;
+  }
+
+  /* Panels tighten on mobile */
+  .panel-3d{
+    padding:28px 18px;
+    border-radius:26px;
+  }
+
+  /* Hero content reset */
+  .hero-center{
+    max-width:100%;
+    padding:0;
+  }
+
+  /* Hero image resize */
+  .hero-image{
+    height:260px;
+    max-width:100%;
+    margin:0 auto;
+    box-shadow:0 18px 40px rgba(0,0,0,.45);
+  }
+
+  /* Header safety */
+  .site-header{
+    overflow:hidden;
+  }
+
+  .navbar{
+    width:100%;
+    padding-left:16px;
+    padding-right:16px;
+  }
+
+}
+@media (max-width: 480px){
+  .btn{
+    width:100%;
+    max-width:320px;
+  }
+}
