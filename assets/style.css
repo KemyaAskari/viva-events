@@ -1063,729 +1063,396 @@ html[data-theme="light"] .footer-social a{
   display:block;
 }
 /* =========================================================
-   HEADER FIX — LOGO + HAMBURGER + MOBILE MENU (OVERRIDES)
-   Paste at END of style.css
+   MOBILE — HEADER + MENU + THEME TOGGLE (FINAL CLEAN)
 ========================================================= */
-
-/* --- Logo: make it PERFECT inside the circle --- */
-.brand .logo{
-  overflow:hidden;                 /* must clip image */
-  display:grid;
-  place-items:center;
-}
-
-.brand .logo img{
-  width:100%;
-  height:100%;
-  object-fit:cover;               /* fills circle (no white edges) */
-  padding:0 !important;           /* remove your padding */
-  border-radius:50%;
-  transform:scale(1.08);          /* slight zoom for cleaner fit */
-}
-
-/* Optional: if you want logo to stay "contain" but still centered:
-.brand .logo img{
-  object-fit:contain;
-  padding:6px !important;
-  transform:none;
-}
-*/
-
-
-/* --- Hamburger visible + clickable on mobile --- */
-.hamburger{
-  display:none;
-  align-items:center;
-  justify-content:center;
-  gap:0;
-  cursor:pointer;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.hamburger span{
-  display:block;
-  width:26px;
-  height:3px;
-  border-radius:3px;
-  background: var(--gold);
-  margin:4px 0;
-}
-
-/* Show hamburger on mobile */
-@media (max-width:900px){
-  .hamburger{ display:flex; flex-direction:column; }
-  .desktop-nav{ display:none; }
-  .theme-toggle{ display:none; } /* your rule */
-}
-
-/* --- Mobile menu: guarantee it is OFF screen unless .open --- */
-.mobile-menu{
-  position:fixed;
-  inset:0;
-  z-index:2000;
-
-  background: linear-gradient(180deg,#0b1220,#0e1a30);
-  padding:30px;
-
-  transform: translateX(105%);
-  opacity:0;
-  visibility:hidden;
-  pointer-events:none;
-
-  transition: transform .35s ease, opacity .25s ease, visibility .25s ease;
-}
-
-.mobile-menu.open{
-  transform: translateX(0);
-  opacity:1;
-  visibility:visible;
-  pointer-events:auto;
-}
-
-/* Prevent page scroll when menu open (JS adds body.menu-open) */
-body.menu-open{ overflow:hidden; }
-
-/* Make mobile menu content look clean */
-.mobile-menu-header{
-  text-align:center;
-  margin-bottom:26px;
-}
-
-.mobile-menu-header img{
-  width:84px;
-  height:84px;
-  object-fit:cover;
-  border-radius:50%;
-  margin:0 auto 12px;
-  border:2px solid rgba(212,175,55,.35);
-  box-shadow: 0 14px 35px rgba(0,0,0,.45);
-}
-
-.mobile-menu-header h3{
-  margin:0;
-  color:#fff;
-  font-family: var(--font-display);
-}
-
-.mobile-menu-header span{
-  display:block;
-  margin-top:6px;
-  color: var(--gold);
-  font-size:13px;
-  letter-spacing:.08em;
-}
-
-/* Mobile links */
-.mobile-menu-nav{
-  display:flex;
-  flex-direction:column;
-  gap:14px;
-  text-align:center;
-}
-
-.mobile-menu-nav a{
-  display:block;
-  padding:14px 16px;
-  border-radius:16px;
-  background: rgba(255,255,255,.04);
-  border:1px solid rgba(212,175,55,.22);
-  font-weight:700;
-}
-
-.mobile-menu-nav a:hover{
-  background: rgba(212,175,55,.14);
-  transform: translateY(-1px);
-}
-
-
-/* =========================================================
-   GALLERY FIX — YOUR HTML USES <img> ONLY
-   Make ALL images same size WITHOUT changing HTML
-========================================================= */
-
-.gallery-grid{
-  display:grid;
-  grid-template-columns:repeat(3, minmax(0, 1fr));
-  gap:26px;
-  align-items:stretch;
-}
-
-/* target your current markup: .gallery-grid > img */
-.gallery-grid > img{
-  width:100%;
-  aspect-ratio: 4 / 5;           /* same height everywhere */
-  object-fit:cover;               /* crop nicely */
-  border-radius:22px;
-
-  border:1.5px solid rgba(212,175,55,.45);
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.06),
-    0 18px 45px rgba(0,0,0,.45);
-
-  transition: transform .35s var(--ease), box-shadow .35s var(--ease), border-color .35s ease;
-}
-
-.gallery-grid > img:hover{
-  transform: translateY(-8px);
-  border-color: rgba(212,175,55,.85);
-  box-shadow: 0 30px 70px rgba(0,0,0,.6);
-}
-
-@media (max-width:900px){
-  .gallery-grid{ grid-template-columns:1fr; }
-  .gallery-grid > img{ aspect-ratio: 16 / 10; } /* better on mobile */
-}
-
-
-/* NAME – DOMINANT */
-.brand .name{
-  font-family:"Playfair Display",serif;
-  font-size:26px;
-  font-weight:900;
-  letter-spacing:.8px;
-  line-height:1.05;
-  text-shadow:0 3px 10px rgba(0,0,0,.6);
-}
-
-/* TAGLINE – GOLD ACCENT */
-.brand em{
-  display:block;
-  margin-top:6px;
-  font-family:"Poppins",sans-serif;
-  font-size:13px;
-  font-weight:600;
-  color:#d4af37;
-  letter-spacing:.6px;
-  opacity:.95;
-}
-
-/* =========================
-   DESKTOP NAV – SECONDARY
-========================= */
-.desktop-nav ul{
-  display:flex;
-  align-items:center;
-  gap:30px;
-  list-style:none;
-}
-
-.desktop-nav a{
-  font-family:"Poppins",sans-serif;
-  font-weight:600;
-  font-size:15px;
-  color:#eaf0ff;
-  text-decoration:none;
-  position:relative;
-  padding:6px 0;
-  opacity:.85;
-  transition:opacity .2s ease;
-}
-
-.desktop-nav a:hover{
-  opacity:1;
-}
-
-.desktop-nav a::after{
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:-8px;
-  width:0;
-  height:2px;
-  background:linear-gradient(90deg,#d4af37,#f2d47b);
-  transition:width .25s ease;
-}
-
-.desktop-nav a:hover::after,
-.desktop-nav a.active::after{
-  width:100%;
-}
-
-/* =========================
-   THEME TOGGLE – PREMIUM
-========================= */
-.theme-toggle{
-  width:46px;
-  height:46px;
-  border-radius:50%;
-  border:1px solid rgba(212,175,55,.45);
-  background:
-    radial-gradient(circle at top,rgba(212,175,55,.35),rgba(212,175,55,.12));
-  color:#f2d47b;
-  box-shadow:
-    0 8px 26px rgba(0,0,0,.45);
-  transition:transform .2s ease, box-shadow .2s ease;
-}
-
-.theme-toggle:hover{
-  transform:translateY(-2px);
-  box-shadow:0 12px 34px rgba(0,0,0,.6);
-}
-
-/* =========================
-   HAMBURGER – CLEAR & LUXE
-========================= */
-.hamburger{
-  display:none;
-  width:48px;
-  height:48px;
-  border-radius:10px;
-  border:1px solid rgba(212,175,55,.35);
-  background:rgba(212,175,55,.08);
-}
-
-.hamburger span{
-  display:block;
-  height:3px;
-  width:26px;
-  background:#d4af37;
-  margin:5px auto;
-  border-radius:3px;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-@media(max-width:900px){
-  .desktop-nav{display:none;}
-  .theme-toggle{display:none;}
-  .hamburger{display:flex; flex-direction:column; justify-content:center;}
-}
-
-/* ======================================================
-   HERO MEDIA — FINAL FIX (DESKTOP + MOBILE + LIGHT/DARK)
-====================================================== */
-
-.hero-media{
-  margin-top:26px;
-  display:flex;
-  justify-content:center;
-}
-
-/* IMAGE CONTAINER */
-.hero-image{
-  position:relative;
-  width:100%;
-
-  height:520px;              /* ✅ proper height */
-  min-height:520px;
-
-  border-radius:34px;
-  overflow:hidden;
-
-  background:
-    url("../assets/image/bg.jpeg") center top / cover no-repeat;
-
-  border:1px solid rgba(212,175,55,.45);
-  box-shadow:0 30px 70px rgba(0,0,0,.45);
-}
-
-/* OVERLAY CARD */
-.hero-overlay{
-  position:absolute;
-
-  left:50%;
-  bottom:26px;               /* ✅ pushed down */
-  transform:translateX(-50%);
-
-  width:86%;
-  max-width:820px;
-
-  padding:22px 28px;
-  text-align:center;
-
-  border-radius:22px;
-}
-
-/* DARK MODE OVERLAY */
-html[data-theme="dark"] .hero-overlay{
-  background:rgba(15,29,53,.55);     /* image visible */
-  backdrop-filter: blur(10px);
-
-  border:1px solid rgba(212,175,55,.45);
-
-  box-shadow:
-    0 18px 40px rgba(0,0,0,.45),
-    inset 0 1px 0 rgba(255,255,255,.06);
-}
-
-/* LIGHT MODE OVERLAY — SAME STYLE, NOT WHITE */
-html[data-theme="light"] .hero-overlay{
-  background:rgba(255,255,255,.65);  /* ✅ image shows */
-  backdrop-filter: blur(10px);
-
-  border:1px solid rgba(212,175,55,.45);
-
-  box-shadow:
-    0 18px 40px rgba(0,0,0,.25),
-    inset 0 1px 0 rgba(255,255,255,.6);
-}
-
-/* OVERLAY TEXT */
-.hero-overlay h3{
-  font-family:var(--font-display);
-  font-size:1.35rem;
-  margin:0;
-}
-
-.hero-overlay .small{
-  margin-top:6px;
-  font-size:.9rem;
-  line-height:1.6;
-}
-
-/* ================= MOBILE FIX ================= */
-
-@media (max-width:768px){
-
-  .hero-image{
-    height:380px;
-    min-height:380px;
-    border-radius:26px;
-  }
-
-  .hero-overlay{
-    bottom:18px;
-    width:90%;
-    padding:18px 22px;
-  }
-
-  .hero-overlay h3{
-    font-size:1.15rem;
-  }
-}
-/* =========================================
-   HARD FIX — STOP MOBILE MENU ON DESKTOP
-========================================= */
-
-.mobile-menu{
-  position:fixed;
-  inset:0;
-
-  transform:translateX(110%);
-  opacity:0;
-  pointer-events:none;
-  visibility:hidden;
-  z-index:1200;
-}
-
-/* ONLY visible when explicitly opened */
-.mobile-menu.open{
-  transform:translateX(0);
-  opacity:1;
-  pointer-events:auto;
-  visibility:visible;
-}
-
-
-
-
-/* =========================================
-   HOW IT WORKS — EQUAL HEIGHT FIX
-========================================= */
-
-.process-grid{
-  display:grid;
-  grid-template-columns:repeat(3, minmax(0, 1fr));
-  gap:22px;
-  align-items:stretch; /* 🔥 IMPORTANT */
-}
-
-/* Card */
-.process-grid .card-3d{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:flex-start;
-
-  height:100%;               /* 🔥 equal height */
-  padding:34px 26px;
-  border-radius:32px;
-
-  text-align:center;
-}
-
-/* Step number */
-.process-grid .step{
-  font-weight:900;
-  color:var(--gold);
-  margin-bottom:8px;
-}
-
-/* Title */
-.process-grid h3{
-  min-height:3.4em;          /* 🔥 same title space */
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  margin-bottom:10px;
-}
-
-/* Description */
-.process-grid p{
-  flex-grow:1;               /* 🔥 fills space evenly */
-  line-height:1.6;
-  max-width:95%;
-}
-
-/* =========================================
-   MOBILE STACK
-========================================= */
-
-@media (max-width: 768px){
-  .process-grid{
-    grid-template-columns:1fr;
-  }
-
-  .process-grid .card-3d{
-    min-height:auto;
-  }
-
-  .process-grid h3{
-    min-height:auto;
-  }
-}
-/* =========================================
-   SERVICES / FEATURES — EQUAL HEIGHT FIX
-========================================= */
-
-/* Grid */
-.features{
-  display:grid;
-  grid-template-columns:repeat(3, minmax(0, 1fr));
-  gap:22px;
-  align-items:stretch; /* 🔥 IMPORTANT */
-}
-
-/* Card */
-.features .card-3d{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:flex-start;
-
-  height:100%;               /* 🔥 same height */
-  padding:32px 26px;
-  border-radius:32px;
-
-  text-align:center;
-}
-
-/* Icon */
-.features .icon{
-  font-size:1.6rem;
-  margin-bottom:12px;
-}
-
-/* Title */
-.features h3{
-  min-height:3.2em;          /* 🔥 forces equal title space */
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  margin-bottom:10px;
-}
-
-/* Text */
-.features p{
-  flex-grow:1;               /* 🔥 fills space evenly */
-  line-height:1.6;
-  max-width:95%;
-}
-
-/* =========================================
-   MOBILE FIX
-========================================= */
-
 @media (max-width: 768px){
 
-  .features{
-    grid-template-columns:1fr;
+  /* ================= HEADER ================= */
+  .desktop-nav{
+    display:none;
   }
 
-  .features .card-3d{
-    min-height:auto;
+  .theme-toggle{
+    display:none; /* hide desktop toggle */
   }
 
-  .features h3{
-    min-height:auto;
+  .hamburger{
+    display:flex;
+    position:absolute;
+    right:16px;
+    top:50%;
+    transform:translateY(-50%);
+
+    width:46px;
+    height:46px;
+
+    border-radius:10px;
+    border:1px solid rgba(212,175,55,.35);
+    background:rgba(212,175,55,.08);
+
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:5px;
+  }
+
+  .hamburger span{
+    width:26px;
+    height:3px;
+    border-radius:3px;
+    background:var(--gold);
+  }
+
+  /* ================= MOBILE MENU CONTAINER ================= */
+  .mobile-menu{
+    position:fixed;
+    inset:0;
+    z-index:3000;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    padding:32px 20px;
+
+    background:linear-gradient(180deg,#0b1220,#0e1a30);
+
+    transform:translateX(110%);
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+
+    transition:transform .4s ease, opacity .3s ease;
+  }
+
+  .mobile-menu.open{
+    transform:translateX(0);
+    opacity:1;
+    visibility:visible;
+    pointer-events:auto;
+  }
+
+  body.menu-open{
+    overflow:hidden;
+  }
+
+  /* ================= LOGO / BRAND ================= */
+  .mobile-menu-header{
+    width:100%;
+    max-width:420px;
+    text-align:center;
+    margin-top:20px;
+    margin-bottom:18px;
+  }
+
+  .mobile-menu-header img{
+    width:86px;
+    height:86px;
+    border-radius:50%;
+    object-fit:cover;
+
+    border:2px solid rgba(212,175,55,.45);
+    box-shadow:0 14px 35px rgba(0,0,0,.45);
+
+    margin:0 auto 12px;
+  }
+
+  .mobile-menu-header h3{
+    margin:0;
+    font-family:var(--font-display);
+    font-size:1.6rem;
+    color:#fff;
+  }
+
+  .mobile-menu-header span{
+    display:block;
+    margin-top:6px;
+    font-size:.75rem;
+    letter-spacing:.2em;
+    color:var(--gold);
+  }
+
+  /* ================= THEME TOGGLE (CENTERED) ================= */
+  .mobile-menu-actions{
+    width:100%;
+    max-width:420px;
+
+    display:flex;
+    justify-content:center;
+    margin:24px 0 30px;
+  }
+
+  .mobile-menu-actions .theme-toggle{
+    display:flex;
+    width:54px;
+    height:54px;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+    cursor:pointer;
+
+    background:
+      radial-gradient(circle at 30% 30%, rgba(212,175,55,.25), transparent 60%),
+      linear-gradient(180deg,#0f1d35,#0b1220);
+
+    border:2px solid rgba(212,175,55,.85);
+
+    box-shadow:
+      inset 0 2px 4px rgba(255,255,255,.15),
+      0 10px 30px rgba(0,0,0,.55);
+  }
+
+  .mobile-menu-actions .theme-toggle i{
+    font-size:1.35rem;
+    color:#ffd86b;
+  }
+
+  html[data-theme="light"] .mobile-menu-actions .theme-toggle{
+    background:linear-gradient(180deg,#ffffff,#f1f3f8);
+  }
+
+  html[data-theme="light"] .mobile-menu-actions .theme-toggle i{
+    color:#131827;
+  }
+
+  /* ================= NAV BUTTONS ================= */
+  .mobile-menu-nav{
+    width:100%;
+    max-width:420px;
+
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+  }
+
+  .mobile-menu-nav a{
+    width:100%;
+    padding:16px;
+
+    border-radius:18px;
+    text-align:center;
+    font-weight:700;
+
+    background:linear-gradient(180deg,#0f1d35,#0b1220);
+    border:1.5px solid rgba(212,175,55,.45);
+
+    opacity:1;
+  }
+
+  html[data-theme="light"] .mobile-menu-nav a{
+    background:linear-gradient(180deg,#ffffff,#f2f4f9);
   }
 }
+
+
 /* =========================================
-   PRICING CARDS — CLEAN FIX
+   EQUAL HEIGHT CARD SYSTEM (GLOBAL FIX)
 ========================================= */
 
-.pricing{
-  display:grid;
-  grid-template-columns:repeat(3, 1fr);
-  gap:26px;
-  align-items:stretch; /* 🔥 same height */
+/* Grid wrapper – applies to ALL these sections */
+.equal-grid,
+.features,
+.process-grid,
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+  align-items: stretch; /* 🔥 KEY */
 }
 
 /* Card base */
-.price-card{
-  display:flex;
-  flex-direction:column;
-  justify-content:flex-start;
+.equal-card,
+.features .card-3d,
+.process-grid .card-3d,
+.values-grid .card-3d {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 
-  height:100%;
-  padding:36px 28px;
-  border-radius:34px;
+  height: 100%;              /* 🔥 FORCE SAME HEIGHT */
+  padding: 34px 26px;
+  border-radius: 32px;
 
-  text-align:center;
+  text-align: center;
 }
 
-/* Title */
-.price-card h3{
-  min-height:3em;           /* 🔥 equal title height */
-  display:flex;
-  align-items:center;
-  justify-content:center;
+/* Icon / number area */
+.equal-card .icon,
+.process-grid .step {
+  margin-bottom: 10px;
+  flex-shrink: 0;
 }
 
-/* Price */
-.price-card .price{
-  margin:12px 0 14px;
-  font-size:1.8rem;
-  font-weight:900;
-  color:var(--gold2);
+/* Title – same vertical space */
+.equal-card h3,
+.features h3,
+.process-grid h3,
+.values-grid h3 {
+  min-height: 3.2em;         /* 🔥 aligns titles */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
 }
 
-/* Description under price */
-.price-card .small{
-  min-height:3.2em;         /* 🔥 equal text block */
-  display:flex;
-  align-items:center;
-  justify-content:center;
+/* Text content fills remaining space */
+.equal-card p,
+.features p,
+.process-grid p,
+.values-grid p {
+  flex-grow: 1;              /* 🔥 fills evenly */
+  line-height: 1.6;
+  max-width: 95%;
+  margin: 0 auto;
 }
 
-/* Feature list */
-.price-card ul{
-  margin-top:18px;
-  padding-left:18px;
-  text-align:left;
-
-  flex-grow:1;              /* 🔥 fills remaining space */
-}
-
-/* List items */
-.price-card li{
-  margin:10px 0;
-  line-height:1.5;
-}
-
-/* FEATURED (middle) CARD */
-.price-card.featured{
-  transform:translateY(-10px);
-  border-color:rgba(242,212,123,.95);
-
-  box-shadow:
-    0 40px 90px rgba(212,175,55,.45),
-    inset 0 1px 0 rgba(255,255,255,.15);
-}
-
-/* Mobile */
-@media (max-width:768px){
-  .pricing{
-    grid-template-columns:1fr;
-  }
-
-  .price-card.featured{
-    transform:none;
-  }
-}
 /* =========================================
-   PACKAGES PAGE — SAME SIZE CARDS (FINAL)
+   MOBILE STACK (CLEAN)
 ========================================= */
+@media (max-width: 900px) {
+  .equal-grid,
+  .features,
+  .process-grid,
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
 
-/* GRID */
-.pricing{
+  .equal-card h3,
+  .features h3,
+  .process-grid h3,
+  .values-grid h3 {
+    min-height: auto;
+  }
+}
+/* ===============================
+   ABOUT PAGE — HERO SPLIT FIX
+=============================== */
+
+.about-split{
   display:grid;
-  grid-template-columns:repeat(3, minmax(0, 1fr));
+  grid-template-columns:repeat(2, minmax(0, 1fr));
   gap:26px;
   align-items:stretch; /* 🔥 forces equal height */
 }
 
-/* CARD BASE */
+/* cards inside */
+.about-split .card-3d{
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+
+  height:100%;               /* 🔥 equal height */
+  padding:36px 28px;
+
+  border-radius:34px;
+  text-align:center;
+}
+
+/* titles */
+.about-split h3{
+  margin-bottom:14px;
+}
+
+/* text */
+.about-split p{
+  line-height:1.65;
+}
+
+/* ===============================
+   MOBILE
+=============================== */
+@media (max-width:768px){
+  .about-split{
+    grid-template-columns:1fr;
+  }
+
+  .about-split .card-3d{
+    height:auto;
+  }
+}
+
+/* =====================================================
+   GLOBAL CARD & CONTAINER SIZE FIX — ALL SECTIONS
+   Applies to: About / Values / Services / Process / Pricing
+===================================================== */
+
+/* ---------- ALL GRIDS ---------- */
+.grid,
+.about-split,
+.features,
+.process-grid,
+.pricing{
+  display:grid;
+  align-items:stretch;     /* 🔥 forces equal height */
+}
+
+/* ---------- ALL CARDS ---------- */
+.card-3d,
 .price-card{
   display:flex;
   flex-direction:column;
   justify-content:flex-start;
 
-  height:100%;                 /* 🔥 SAME HEIGHT */
+  height:100%;             /* 🔥 same height everywhere */
   padding:36px 28px;
-  border-radius:34px;
 
+  border-radius:34px;
   text-align:center;
 }
 
-/* TITLE — SAME SPACE */
+/* ---------- HEADINGS SAME SPACE ---------- */
+.card-3d h3,
 .price-card h3{
-  min-height:3.2em;            /* 🔥 equal title height */
+  min-height:3em;          /* 🔥 prevents uneven titles */
   display:flex;
   align-items:center;
   justify-content:center;
+  margin-bottom:12px;
 }
 
-/* PRICE */
-.price-card .price{
-  margin:14px 0 12px;
-  font-size:1.8rem;
-  font-weight:900;
-  color:var(--gold2);
-}
-
-/* DESCRIPTION — SAME SPACE */
+/* ---------- TEXT FILLS SPACE ---------- */
+.card-3d p,
 .price-card .small{
-  min-height:3.4em;            /* 🔥 equal description height */
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  flex-grow:1;             /* 🔥 equal vertical fill */
+  line-height:1.6;
 }
 
-/* FEATURE LIST — FILLS SPACE */
-.price-card .list{
-  flex-grow:1;                 /* 🔥 pushes button/edges evenly */
-  margin-top:18px;
-  padding-left:18px;
+/* ---------- LISTS FILL REMAINING SPACE ---------- */
+.card-3d ul,
+.price-card ul{
+  flex-grow:1;
   text-align:left;
+  padding-left:18px;
 }
 
-/* LIST ITEMS */
-.price-card .list li{
-  margin:10px 0;
-  line-height:1.5;
-}
-
-/* FEATURED CARD (POPULAR) */
-.price-card.featured{
-  transform:translateY(-10px);
-  border-color:rgba(242,212,123,.95);
-
-  box-shadow:
-    0 40px 90px rgba(212,175,55,.45),
-    inset 0 1px 0 rgba(255,255,255,.15);
-}
-
-/* BADGE SPACING FIX */
-.price-card .mini-badge{
+/* ---------- ICONS / NUMBERS ---------- */
+.card-3d .icon,
+.card-3d .step{
   margin-bottom:10px;
 }
 
-/* ================= MOBILE ================= */
+/* =====================================================
+   MOBILE — STACK CLEANLY
+===================================================== */
+@media (max-width:768px){
 
-@media (max-width: 900px){
-  .pricing{
-    grid-template-columns:repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px){
+  .grid,
+  .about-split,
+  .features,
+  .process-grid,
   .pricing{
     grid-template-columns:1fr;
   }
 
-  .price-card.featured{
-    transform:none;
+  .card-3d,
+  .price-card{
+    height:auto;
+  }
+
+  .card-3d h3,
+  .price-card h3{
+    min-height:auto;
   }
 }

@@ -1,5 +1,5 @@
 /* ======================================================
-   Viva Events – Global UI Script (FINAL & FIXED)
+   Viva Events – Global UI Script (FINAL & MOBILE FIXED)
 ====================================================== */
 
 document.addEventListener("DOMContentLoaded", async () => {
@@ -21,44 +21,35 @@ document.addEventListener("DOMContentLoaded", async () => {
   await loadPartial("site-header", "partials/header.html");
   await loadPartial("site-footer", "partials/footer.html");
 
-  /* ================= THEME TOGGLE ================= */
-  function initThemeToggle() {
-    const root = document.documentElement;
-    const toggles = document.querySelectorAll(".theme-toggle");
+  /* ================= THEME STATE ================= */
+  const root = document.documentElement;
 
-    const savedTheme = localStorage.getItem("ve_theme") || "dark";
-    root.setAttribute("data-theme", savedTheme);
+  function applyTheme(theme) {
+    root.setAttribute("data-theme", theme);
+    localStorage.setItem("ve_theme", theme);
 
-    toggles.forEach(btn => {
-      const icon = btn.querySelector("i");
-      if (icon) {
-        icon.className =
-          savedTheme === "light"
-            ? "fa-solid fa-moon"
-            : "fa-solid fa-sun";
-      }
-
-      btn.addEventListener("click", () => {
-        const current = root.getAttribute("data-theme");
-        const next = current === "dark" ? "light" : "dark";
-
-        root.setAttribute("data-theme", next);
-        localStorage.setItem("ve_theme", next);
-
-        toggles.forEach(b => {
-          const i = b.querySelector("i");
-          if (i) {
-            i.className =
-              next === "light"
-                ? "fa-solid fa-moon"
-                : "fa-solid fa-sun";
-          }
-        });
-      });
+    document.querySelectorAll(".theme-toggle i").forEach(icon => {
+      icon.className =
+        theme === "dark"
+          ? "fa-solid fa-moon"
+          : "fa-solid fa-sun";
     });
   }
 
-  initThemeToggle();
+  // Load saved theme (default = dark)
+  const savedTheme = localStorage.getItem("ve_theme") || "dark";
+  applyTheme(savedTheme);
+
+  /* ================= THEME TOGGLE (DESKTOP + MOBILE) ================= */
+  // 🔥 EVENT DELEGATION — WORKS EVEN IF BUTTON LOADS LATER
+  document.addEventListener("click", (e) => {
+    const toggle = e.target.closest(".theme-toggle");
+    if (!toggle) return;
+
+    const current = root.getAttribute("data-theme") || "dark";
+    const next = current === "dark" ? "light" : "dark";
+    applyTheme(next);
+  });
 
   /* ================= MOBILE MENU ================= */
   const hamburger = document.querySelector(".hamburger");
@@ -68,6 +59,14 @@ document.addEventListener("DOMContentLoaded", async () => {
     hamburger.addEventListener("click", () => {
       mobileMenu.classList.toggle("open");
       hamburger.classList.toggle("active");
+    });
+
+    // Optional: close menu when clicking a link
+    mobileMenu.addEventListener("click", (e) => {
+      if (e.target.tagName === "A") {
+        mobileMenu.classList.remove("open");
+        hamburger.classList.remove("active");
+      }
     });
   }
 
