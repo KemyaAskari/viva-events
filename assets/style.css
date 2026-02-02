@@ -2141,5 +2141,11 @@ html[data-theme="light"] .hero-caption.card-3d{
   cursor: pointer;
   border-top: 1px solid rgba(255,255,255,0.1);
 }
+/* Hide theme toggle on mobile */
+@media (max-width: 768px){
+  .site-header .theme-toggle{
+    display: none !important;
+  }
+}
 
 }
