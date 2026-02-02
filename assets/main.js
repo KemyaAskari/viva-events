@@ -52,22 +52,49 @@ document.addEventListener("DOMContentLoaded", async () => {
   });
 
   /* ================= MOBILE MENU ================= */
-  const hamburger = document.querySelector(".hamburger");
+document.addEventListener("click", (e) => {
   const mobileMenu = document.getElementById("mobileMenu");
+  const hamburger = e.target.closest(".hamburger");
 
+  // helper to close menu safely
+  const closeMenu = () => {
+    const menu = document.getElementById("mobileMenu");
+    const btn = document.querySelector(".hamburger");
+    if (menu) menu.classList.remove("is-open");
+    if (btn) {
+      btn.classList.remove("active");
+      btn.setAttribute("aria-expanded", "false");
+    }
+    document.body.style.overflow = "";
+  };
+
+  // open/close by clicking hamburger
   if (hamburger && mobileMenu) {
-    hamburger.addEventListener("click", () => {
-      mobileMenu.classList.toggle("open");
-      hamburger.classList.toggle("active");
-    });
-
-    // Optional: close menu when clicking a link
-    mobileMenu.addEventListener("click", (e) => {
-      if (e.target.tagName === "A") {
-        mobileMenu.classList.remove("open");
-        hamburger.classList.remove("active");
-      }
-    });
+    const isOpen = mobileMenu.classList.toggle("is-open");
+    hamburger.classList.toggle("active", isOpen);
+    hamburger.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    document.body.style.overflow = isOpen ? "hidden" : "";
+    return;
   }
+
+  // ✅ close when clicking Exit button
+  if (e.target.closest("#menuCloseBtn")) {
+    closeMenu();
+    return;
+  }
+
+  // close when clicking a mobile menu link
+  if (e.target.closest("#mobileMenu a")) {
+    closeMenu();
+    return;
+  }
+
+  // close when clicking outside the 3D box (overlay area)
+  if (mobileMenu && mobileMenu.classList.contains("is-open") && e.target === mobileMenu) {
+    closeMenu();
+    return;
+  }
+});
+
 
 });
