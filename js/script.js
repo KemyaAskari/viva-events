@@ -4,28 +4,25 @@ const menuBtn = document.getElementById("menuBtn");
 const menuCloseBtn = document.getElementById("menuCloseBtn");
 const nav = document.getElementById("nav");
 const overlay = document.getElementById("menuOverlay");
+const header = document.querySelector(".header");
 
-// Open mobile menu
-if (menuBtn && nav && overlay) {
-  menuBtn.addEventListener("click", function () {
-    nav.classList.add("open");
-    overlay.classList.add("active");
-    document.body.classList.add("menu-open");
-    menuBtn.setAttribute("aria-expanded", "true");
-  });
+// MOBILE MENU
+function openMenu() {
+  nav.classList.add("open");
+  overlay.classList.add("active");
+  document.body.classList.add("menu-open");
+  menuBtn.setAttribute("aria-expanded", "true");
 }
 
-// Close mobile menu
 function closeMenu() {
-  if (nav && overlay) {
-    nav.classList.remove("open");
-    overlay.classList.remove("active");
-    document.body.classList.remove("menu-open");
+  nav.classList.remove("open");
+  overlay.classList.remove("active");
+  document.body.classList.remove("menu-open");
+  menuBtn.setAttribute("aria-expanded", "false");
+}
 
-    if (menuBtn) {
-      menuBtn.setAttribute("aria-expanded", "false");
-    }
-  }
+if (menuBtn && nav && overlay) {
+  menuBtn.addEventListener("click", openMenu);
 }
 
 if (menuCloseBtn) {
@@ -36,27 +33,22 @@ if (overlay) {
   overlay.addEventListener("click", closeMenu);
 }
 
-// Close menu when clicking any nav link
-const navLinks = document.querySelectorAll(".nav a");
-
-navLinks.forEach(function (link) {
+document.querySelectorAll(".nav a").forEach(function (link) {
   link.addEventListener("click", closeMenu);
 });
 
-// Header shadow on scroll
-const header = document.querySelector(".header");
-
+// HEADER SCROLL EFFECT
 window.addEventListener("scroll", function () {
-  if (header) {
-    if (window.scrollY > 20) {
-      header.classList.add("scrolled");
-    } else {
-      header.classList.remove("scrolled");
-    }
+  if (!header) return;
+
+  if (window.scrollY > 20) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
   }
 });
 
-// Hero image slider
+// HERO IMAGE SLIDER
 const slides = document.querySelectorAll(".image-slider .slide");
 let currentSlide = 0;
 
@@ -68,7 +60,7 @@ if (slides.length > 0) {
   }, 3000);
 }
 
-// Gallery lightbox
+// GALLERY LIGHTBOX
 function openLightbox(src) {
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
@@ -87,7 +79,7 @@ function closeLightbox() {
   }
 }
 
-// Contact form to email
+// CONTACT FORM EMAIL ALERT
 const quoteForm = document.getElementById("quoteForm");
 
 if (quoteForm) {
