@@ -1,127 +1,405 @@
-<!doctype html>
-<html lang="en" data-theme="dark">
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2324776541170272"
-     crossorigin="anonymous"></script>
-  <meta name="google-adsense-account" content="ca-pub-2324776541170272">
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gallery | Viva Events</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Gallery | Viva Events — Luxury Event Styling</title>
+  <meta name="description" content="Viva Events gallery for weddings, birthdays, corporate events, baby showers and luxury event styling in Sydney NSW.">
+  <meta name="keywords" content="event planner Sydney, wedding planner NSW, birthday decoration Sydney, event styling Sydney, event gallery NSW">
+  <meta name="author" content="Viva Events">
+  <meta name="robots" content="index, follow">
 
-  <meta name="description"
-    content="Browse recent Viva Events setups featuring balloon styling, custom backdrops, florals, and luxury event decor across Sydney." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <link rel="icon" href="assets/img/favicon.png" />
-  <link rel="stylesheet" href="assets/style.css" />
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-/>
-
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/script.js"></script>
 </head>
 
 <body>
 
-<!-- HEADER -->
-<div id="site-header"></div>
-
-<main>
-
-<!-- ================= HERO ================= -->
-<section class="section hero">
-  <div class="container">
-
-    <div class="panel-3d hero-3d center">
-      <span class="kicker pill">Gallery</span>
-
-      <h1>Our Work</h1>
-
-      <p class="lead">
-        A curated look at recent Viva Events setups across Sydney.
-      </p>
-
-      <p class="small">
-        Each installation is custom-styled to suit the event, venue,
-        and client vision — with careful attention to balance and detail.
-      </p>
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="container">
+      <span>📍 Sydney NSW | Weddings • Birthdays • Corporate Events</span>
+      <span>💬 Fast booking through WhatsApp | ✉️ vivaeventssydney@gmail.com</span>
     </div>
-
   </div>
-</section>
 
-<!-- ================= GALLERY ================= -->
-<section class="section">
-  <div class="container">
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container nav-wrap">
 
-    <div class="panel-3d section-3d">
+      <a class="logo" href="index.html">
+        <img src="image/logo.png" alt="Viva Events Logo" class="logo-img">
+        <span class="logo-text">Viva Events</span>
+      </a>
 
-      <header class="section-head center">
-        <span class="kicker pill">Portfolio</span>
-        <h2>Gallery of Past Events</h2>
-        <p class="small">Explore some of our beautifully styled celebrations.</p>
-      </header>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false">
+        ☰
+      </button>
 
-      <div class="gallery-grid">
+      <nav class="nav" id="nav">
 
-        <a class="gallery-item" href="assets/img/gallery-1.jpg">
-          <img src="assets/image/n.jpeg" alt="Luxury event styling setup">
+        <div class="mobile-menu-head">
+          <div class="mobile-menu-brand">
+            <img src="image/logo.png" alt="Viva Events Logo" class="logo-img small">
+            <span>Viva Events</span>
+          </div>
+
+          <button id="menuCloseBtn" class="menu-close" type="button" aria-label="Close menu">
+            ✕
+          </button>
+        </div>
+
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="packages.html">Packages</a>
+        <a class="active" href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="terms.html">Terms</a>
+
+        <a class="nav-mobile-cta" href="https://wa.me/message/VMZV2DOHDPECG1" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> WhatsApp Quote
         </a>
 
-        <a class="gallery-item" href="assets/img/gallery-2.jpg">
-          <img src="assets/image/birthday.jpeg" alt="Balloon and backdrop styling">
-        </a>
+      </nav>
+    </div>
+  </header>
 
-        <a class="gallery-item" href="assets/img/gallery-3.jpg">
-          <img src="assets/image/gender reveal.jpeg" alt="Floral event decor">
-        </a>
+  <div id="menuOverlay" class="menu-overlay"></div>
 
-        <a class="gallery-item" href="assets/img/gallery-4.jpg">
-          <img src="assets/image/nikkah.jpeg" alt="Wedding backdrop design">
-        </a>
+  <!-- HERO -->
+  <section class="hero gallery-hero">
+    <div class="container hero-grid">
 
-        <a class="gallery-item" href="assets/img/gallery-5.jpg">
-          <img src="assets/image/pink and blue.jpeg" alt="Birthday styling setup">
-        </a>
+      <div>
+        <span class="badge">Gallery</span>
 
-        <a class="gallery-item" href="assets/img/gallery-6.jpg">
-          <img src="assets/image/new.jpeg" alt="Corporate event decor">
-        </a>
-        <a class="gallery-item" href="assets/img/gallery-6.jpg">
-          <img src="assets/image/blue.jpeg" alt="Corporate event decor">
-        </a>
-        <a class="gallery-item" href="assets/img/gallery-6.jpg">
-          <img src="assets/image/modern.jpeg" alt="Corporate event decor">
-        </a>
-        <a class="gallery-item" href="assets/img/gallery-6.jpg">
-          <img src="assets/image/red.jpeg" alt="Corporate event decor">
-        </a>
+        <h1>Event styling inspiration.</h1>
+
+        <p>
+          Explore wedding styling, birthday decorations, stage setups and luxury event designs.
+          Use these ideas to choose your theme, colours and package.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://wa.me/message/VMZV2DOHDPECG1" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp"></i> Book on WhatsApp
+          </a>
+
+          <a class="btn btn-light" href="contact.html">
+            Get a Quote
+          </a>
+        </div>
+      </div>
+
+      <div class="image-slider" id="imageSlider">
+        <img src="image/wedding.jpeg" class="slide active" alt="Wedding event styling">
+        <img src="image/birthday.jpeg" class="slide" alt="Birthday decoration">
+        <img src="image/stage-4.jpeg" class="slide" alt="Stage decoration">
+        <img src="image/stage-2.jpeg" class="slide" alt="Luxury event stage">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GALLERY INTRO -->
+  <section class="section">
+    <div class="container">
+
+      <div class="section-title">
+        <span>Our Work</span>
+        <h2>Premium event gallery</h2>
+        <p>
+          Click any photo to view it larger. These examples show styling ideas for weddings,
+          birthdays, corporate events and custom celebrations.
+        </p>
+      </div>
+
+      <div class="cards">
+
+        <div class="card">
+          <div class="icon">💍</div>
+          <h3>Wedding Styling</h3>
+          <p>Elegant backdrops, bridal tables, stage décor, floral styling and luxury reception setups.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🎂</div>
+          <h3>Birthday Decoration</h3>
+          <p>Balloon styling, cake tables, themed backdrops, photo corners and colourful setups.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">✨</div>
+          <h3>Stage & Custom Setups</h3>
+          <p>Premium stages, cultural celebrations, custom themes and formal event presentation.</p>
+        </div>
 
       </div>
 
     </div>
+  </section>
 
-    <!-- ================= CTA ================= -->
-    <div class="panel-3d section-3d center" style="margin-top:48px;">
-      <h2>Inspired by what you see?</h2>
-      <p class="small">
-        Every event is styled to order — colours, layout and details
-        are tailored to your celebration and venue.
+  <!-- GALLERY GRID -->
+  <section class="section">
+    <div class="container">
+
+      <div class="section-title">
+        <span>Photo Gallery</span>
+        <h2>Choose your event inspiration</h2>
+        <p>Tell us which photo style you like when you request your quote.</p>
+      </div>
+
+      <div class="gallery">
+
+        <div onclick="openLightbox('image/wedding.jpeg')">
+          <img src="image/wedding.jpeg" alt="Wedding styling">
+          <span>Wedding Styling</span>
+        </div>
+
+        <div onclick="openLightbox('image/birthday.jpeg')">
+          <img src="image/birthday.jpeg" alt="Birthday decoration">
+          <span>Birthday Décor</span>
+        </div>
+
+        <div onclick="openLightbox('image/stage 1.jpeg')">
+          <img src="image/stage-1.jpeg" alt="Stage setup">
+          <span>Stage Setup</span>
+        </div>
+
+        <div onclick="openLightbox('image/stage 2.jpeg')">
+          <img src="image/stage-2.jpeg" alt="Luxury stage">
+          <span>Luxury Stage</span>
+        </div>
+
+        <div onclick="openLightbox('image/stage 3.jpeg')">
+          <img src="image/stage-3.jpeg" alt="Event decoration">
+          <span>Event Decoration</span>
+        </div>
+
+        <div onclick="openLightbox('image/stage 4.jpeg')">
+          <img src="image/wedding.jpeg" alt="Custom theme decoration">
+          <span>Custom Theme</span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- HOW TO USE GALLERY -->
+  <section class="section dark">
+    <div class="container">
+
+      <div class="section-title">
+        <span>Planning Tip</span>
+        <h2>How to use our gallery</h2>
+        <p>Use the gallery to explain your style clearly when contacting us.</p>
+      </div>
+
+      <div class="steps">
+
+        <div class="step">
+          <span class="num">1</span>
+          <div>
+            <h3>Pick a style</h3>
+            <p>Choose the photo or design that matches your event theme, colour and mood.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="num">2</span>
+          <div>
+            <h3>Send your details</h3>
+            <p>Message us your event date, venue, guest number and preferred package.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="num">3</span>
+          <div>
+            <h3>Get a quote</h3>
+            <p>We prepare a quote based on event size, design level, setup time and location.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- QUOTE CTA -->
+  <section class="section">
+    <div class="container split">
+
+      <div class="panel">
+        <h2>Want this style for your event?</h2>
+        <p>
+          Send us the photo style you like, your date, venue, guest number, theme colours and budget.
+          We will recommend a suitable package or custom quote.
+        </p>
+
+        <ul class="list">
+          <li>Wedding and engagement styling</li>
+          <li>Birthday and baby shower décor</li>
+          <li>Corporate and formal event setup</li>
+          <li>Custom theme and cultural celebrations</li>
+        </ul>
+      </div>
+
+      <div class="panel">
+        <h2>Request a design quote</h2>
+        <p>
+          For the fastest reply, contact us on WhatsApp and include your event details.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://wa.me/message/VMZV2DOHDPECG1" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+          </a>
+
+          <a class="btn btn-dark" href="packages.html">
+            View Packages
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" type="button" aria-label="Close image">✕</button>
+    <img id="lightbox-img" src="image/wedding.jpeg" alt="Gallery image">
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+
+    <div class="container footer-grid">
+
+      <div class="footer-col">
+        <div class="footer-logo">
+          <img src="image/logo.png" alt="Viva Events Logo">
+          <h3>Viva Events</h3>
+        </div>
+
+        <p>
+          Premium event planning, styling and decoration services across Sydney NSW.
+          We create beautiful weddings, birthdays and corporate events with luxury design.
+        </p>
+
+        <div class="footer-social">
+
+          <a href="https://wa.me/message/VMZV2DOHDPECG1" target="_blank" rel="noopener" class="whatsapp" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+
+          <a href="https://www.instagram.com/zartaa_askari" target="_blank" rel="noopener" class="instagram" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+
+          <a href="https://www.tiktok.com/@zartaa4" target="_blank" rel="noopener" class="tiktok" aria-label="TikTok">
+            <i class="fab fa-tiktok"></i>
+          </a>
+
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="packages.html">Packages</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Our Services</h4>
+        <a href="services.html">Wedding Styling</a>
+        <a href="services.html">Birthday Decoration</a>
+        <a href="services.html">Corporate Events</a>
+        <a href="services.html">Baby Shower Setup</a>
+        <a href="services.html">Custom Theme Design</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+
+        <p><i class="fa-solid fa-location-dot"></i> Sydney NSW, Australia</p>
+        <p><i class="fa-solid fa-envelope"></i> vivaeventssydney@gmail.com</p>
+        <p><i class="fa-brands fa-whatsapp"></i> WhatsApp Booking Available</p>
+
+        <a href="https://wa.me/message/VMZV2DOHDPECG1" target="_blank" rel="noopener" class="footer-btn">
+          <i class="fab fa-whatsapp"></i> Get Quote
+        </a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>
+        © 2025 Viva Events. All Rights Reserved.<br>
+        <span class="designer">Designed by Kemya Askari</span>
       </p>
 
-      <div class="actions center">
-        <a href="contact.html" class="btn primary">Request a Quote</a>
+      <div class="footer-legal">
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="refund.html">Refund</a>
       </div>
     </div>
 
+  </footer>
+
+  <!-- FLOATING BUTTONS -->
+  <div class="floating">
+
+    <a class="whatsapp" href="https://wa.me/message/VMZV2DOHDPECG1" target="_blank" rel="noopener" title="WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <a class="instagram" href="https://www.instagram.com/zartaa_askari" target="_blank" rel="noopener" title="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+
+    <a class="tiktok" href="https://www.tiktok.com/@zartaa4" target="_blank" rel="noopener" title="TikTok">
+      <i class="fab fa-tiktok"></i>
+    </a>
+
   </div>
-</section>
 
-</main>
+  <!-- GALLERY SCRIPT -->
+  <script>
+    function openLightbox(src) {
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+      lightboxImg.src = src;
+      lightbox.style.display = "flex";
+    }
 
-<!-- FOOTER -->
-<div id="site-footer"></div>
+    function closeLightbox() {
+      document.getElementById("lightbox").style.display = "none";
+    }
 
-<script src="assets/main.js"></script>
+    const sliderImages = document.querySelectorAll(".image-slider .slide");
+    let currentSlide = 0;
+
+    if (sliderImages.length > 0) {
+      setInterval(() => {
+        sliderImages[currentSlide].classList.remove("active");
+        currentSlide = (currentSlide + 1) % sliderImages.length;
+        sliderImages[currentSlide].classList.add("active");
+      }, 3000);
+    }
+  </script>
+
 </body>
+
 </html>

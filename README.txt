@@ -1,0 +1,1 @@
+Viva Events final complete website. Includes WhatsApp booking, Instagram, TikTok, premium CSS, mobile menu, services, packages, contact, terms, privacy and refund pages. Replace placeholder email if needed. Upload the full folder to GitHub Pages or hosting.
