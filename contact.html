@@ -1,408 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <title>Contact | Viva Events</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="Contact Viva Events for professional event planning, styling and decoration in Sydney NSW. Get a quote for weddings, birthdays, corporate events and custom celebrations.">
-  <meta name="keywords" content="event planner Sydney, wedding planner NSW, birthday decoration Sydney, event styling Sydney, contact Viva Events">
-  <meta name="author" content="Viva Events">
-  <meta name="robots" content="index, follow">
+  <meta name="description" content="Contact Viva Events for event planning, styling and decoration services in Sydney NSW.">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
   <link rel="stylesheet" href="css/style.css">
   <script defer src="js/script.js"></script>
 </head>
 
 <body>
 
-  <!-- TOP BAR -->
-  <div class="topbar">
-    <div class="container">
-      <span>📍 Sydney NSW | Weddings • Birthdays • Corporate Events</span>
-      <span>💬 Fast booking through WhatsApp | ✉️ vivaeventssydney@gmail.com</span>
-    </div>
+<div id="site-header"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container" style="text-align:center;">
+    <span class="badge">Contact Us</span>
+    <h1>Plan your event with confidence</h1>
+    <p>
+      Send your event details and we will help you choose the best styling and package.
+    </p>
   </div>
+</section>
 
-  <!-- HEADER -->
-  <header class="header">
-    <div class="container nav-wrap">
+<!-- CONTACT SECTION -->
+<section class="section">
+  <div class="container split">
 
-      <a class="logo" href="index.html">
-        <img src="image/logo.png" alt="Viva Events Logo" class="logo-img">
-        <span class="logo-text">Viva Events</span>
-      </a>
-
-      <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false">
-        ☰
-      </button>
-
-      <nav class="nav" id="nav">
-
-        <div class="mobile-menu-head">
-          <div class="mobile-menu-brand">
-            <img src="image/logo.png" alt="Viva Events Logo" class="logo-img small">
-            <span>Viva Events</span>
-          </div>
-
-          <button id="menuCloseBtn" class="menu-close" type="button" aria-label="Close menu">
-            ✕
-          </button>
-        </div>
-
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="packages.html">Packages</a>
-        <a href="gallery.html">Gallery</a>
-        <a class="active" href="contact.html">Contact</a>
-        <a href="terms.html">Terms</a>
-
-        <a class="nav-mobile-cta" href="https://wa.me/message/VMZV2DOHDPECG1" target="_blank" rel="noopener">
-          <i class="fab fa-whatsapp"></i> WhatsApp Quote
-        </a>
-
-      </nav>
-    </div>
-  </header>
-
-  <div id="menuOverlay" class="menu-overlay"></div>
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container">
-
-      <span class="badge">Contact Viva Events</span>
-
-      <h1>Get a free event quote.</h1>
-
+    <!-- LEFT INFO -->
+    <div class="panel">
+      <h2>Get in touch</h2>
       <p>
-        Send your event details and we will reply with package options, styling ideas,
-        pricing information and next steps.
+        We respond to all enquiries as soon as possible. Please include clear details so we can give you an accurate quote.
       </p>
 
-      <div class="social-cta">
+      <ul class="list">
+        <li><strong>Email:</strong> vivaeventssydney@gmail.com</li>
+        <li><strong>Location:</strong> Sydney NSW</li>
+        <li><strong>Services:</strong> Weddings, Birthdays, Corporate Events, Baby Showers</li>
+      </ul>
 
-        <a href="https://wa.me/message/VMZV2DOHDPECG1" target="_blank" rel="noopener" class="cta whatsapp">
-          <i class="fab fa-whatsapp"></i>
-          <span>Chat on WhatsApp</span>
-        </a>
-
-        <a href="https://www.instagram.com/zartaa_askari" target="_blank" rel="noopener" class="cta instagram">
-          <i class="fab fa-instagram"></i>
-          <span>Instagram</span>
-        </a>
-
-        <a href="https://www.tiktok.com/@zartaa4" target="_blank" rel="noopener" class="cta tiktok">
-          <i class="fab fa-tiktok"></i>
-          <span>TikTok</span>
-        </a>
-
-      </div>
-
+      <h3 style="margin-top:20px;">What to include:</h3>
+      <ul class="list">
+        <li>Event type (wedding, birthday, etc.)</li>
+        <li>Event date</li>
+        <li>Venue & suburb</li>
+        <li>Guest numbers</li>
+        <li>Theme or colours</li>
+        <li>Budget range (optional)</li>
+      </ul>
     </div>
-  </section>
 
-  <!-- CONTACT INFO + FORM -->
-  <section class="section">
-    <div class="container split">
+    <!-- RIGHT FORM -->
+    <div class="panel">
 
-      <!-- INFO PANEL -->
-      <div class="panel">
-        <h2>What to send us</h2>
+      <h2>Send your request</h2>
 
-        <p>
-          To prepare a clear quote, please send as much information as possible.
-          This helps us recommend the best package for your event.
-        </p>
+      <form id="quoteForm" class="form">
 
-        <ul class="list">
-          <li>Your full name and phone number</li>
-          <li>Event type: wedding, birthday, corporate, baby shower or custom event</li>
-          <li>Event date and preferred setup time</li>
-          <li>Venue name, suburb or location</li>
-          <li>Number of guests</li>
-          <li>Theme, colours and style inspiration</li>
-          <li>Preferred package or budget range</li>
-          <li>Any venue rules, access times, parking or power access information</li>
-        </ul>
+        <input type="text" id="name" placeholder="Full Name" required>
 
-        <p>
-          <b>WhatsApp:</b> Fast booking available<br>
-          <b>Email:</b> vivaeventssydney@gmail.com<br>
-          <b>Location:</b> Sydney NSW, Australia
-        </p>
-      </div>
+        <input type="tel" id="phone" placeholder="Phone Number" required>
 
-      <!-- FORM -->
-      <form class="panel form" id="quoteForm">
-
-        <h2>Request a Quote</h2>
-
-        <input id="name" type="text" placeholder="Full name" required>
-
-        <input id="phone" type="tel" placeholder="Phone number" required>
-
-        <input id="email" type="email" placeholder="Email address">
+        <input type="email" id="email" placeholder="Email Address" required>
 
         <select id="eventType" required>
-          <option value="">Select event type</option>
+          <option value="">Select Event Type</option>
           <option>Wedding</option>
           <option>Birthday</option>
           <option>Corporate Event</option>
           <option>Baby Shower</option>
-          <option>Engagement</option>
-          <option>Cultural Event</option>
           <option>Other</option>
         </select>
 
-        <input id="eventDate" type="text" placeholder="Event date">
+        <input type="date" id="eventDate" required>
 
-        <input id="location" type="text" placeholder="Venue / suburb / location">
+        <input type="text" id="location" placeholder="Event Location (Suburb / Venue)" required>
 
-        <input id="guests" type="text" placeholder="Number of guests">
+        <input type="number" id="guests" placeholder="Number of Guests">
 
         <select id="packageType">
-          <option value="">Preferred package</option>
-          <option>Basic Package</option>
-          <option>Standard Package</option>
-          <option>Premium Package</option>
-          <option>Custom Quote</option>
+          <option value="">Select Package</option>
+          <option>Basic</option>
+          <option>Standard</option>
+          <option>Premium</option>
+          <option>Custom</option>
         </select>
 
-        <input id="budget" type="text" placeholder="Budget range">
+        <input type="text" id="budget" placeholder="Budget Range (Optional)">
 
-        <textarea id="message" placeholder="Theme, colours, setup ideas, venue rules, access time, parking, power access or any special requests"></textarea>
+        <textarea id="message" placeholder="Theme, colours, ideas, venue rules, setup time, parking or any special requests"></textarea>
 
-        <button class="btn-luxury" type="submit">
-          <i class="fa-solid fa-envelope"></i> Send Your Request
+        <button class="btn btn-primary" type="submit">
+          <i class="fa-solid fa-paper-plane"></i> Send Your Request
         </button>
 
       </form>
 
     </div>
-  </section>
-
-  <!-- BOOKING PROCESS -->
-  <section class="section dark">
-    <div class="container">
-
-      <div class="section-title">
-        <span>Booking Process</span>
-        <h2>How your enquiry works</h2>
-        <p>We keep the process simple and clear from the first message.</p>
-      </div>
-
-      <div class="steps">
-
-        <div class="step">
-          <span class="num">1</span>
-          <div>
-            <h3>Send Event Details</h3>
-            <p>Tell us your event date, venue, guest number, theme, package preference and budget.</p>
-          </div>
-        </div>
-
-        <div class="step">
-          <span class="num">2</span>
-          <div>
-            <h3>Receive Package Options</h3>
-            <p>We reply with suitable options, inclusions, price estimate and setup requirements.</p>
-          </div>
-        </div>
-
-        <div class="step">
-          <span class="num">3</span>
-          <div>
-            <h3>Confirm Booking</h3>
-            <p>Once you approve the quote and pay the required deposit, your event date is secured.</p>
-          </div>
-        </div>
-
-        <div class="step">
-          <span class="num">4</span>
-          <div>
-            <h3>Event Setup</h3>
-            <p>We prepare the styling and complete the decoration setup according to the agreed plan.</p>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- IMPORTANT CUSTOMER NOTES -->
-  <section class="section">
-    <div class="container">
-
-      <div class="section-title">
-        <span>Important Information</span>
-        <h2>Before requesting a quote</h2>
-        <p>Please check these details so we can provide the most accurate event plan.</p>
-      </div>
-
-      <div class="legal-grid">
-
-        <div class="legal-box">
-          <h3>Venue Access</h3>
-          <p>Please confirm setup access times, loading area, parking and whether the venue has any decoration restrictions.</p>
-        </div>
-
-        <div class="legal-box">
-          <h3>Power & Safety</h3>
-          <p>If lighting, signage or special equipment is needed, please confirm power access and venue safety rules.</p>
-        </div>
-
-        <div class="legal-box">
-          <h3>Deposit</h3>
-          <p>A deposit may be required to secure your event date, planning time and preparation work.</p>
-        </div>
-
-        <div class="legal-box">
-          <h3>Final Quote</h3>
-          <p>Final pricing depends on event size, styling level, travel, venue access, setup time and custom items.</p>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-
-    <div class="container footer-grid">
-
-      <div class="footer-col">
-        <div class="footer-logo">
-          <img src="image/logo.png" alt="Viva Events Logo">
-          <h3>Viva Events</h3>
-        </div>
-
-        <p>
-          Premium event planning, styling and decoration services across Sydney NSW.
-          We create beautiful weddings, birthdays and corporate events with luxury design.
-        </p>
-
-        <div class="footer-social">
-
-          <a href="https://wa.me/message/VMZV2DOHDPECG1" target="_blank" rel="noopener" class="whatsapp" aria-label="WhatsApp">
-            <i class="fab fa-whatsapp"></i>
-          </a>
-
-          <a href="https://www.instagram.com/zartaa_askari" target="_blank" rel="noopener" class="instagram" aria-label="Instagram">
-            <i class="fab fa-instagram"></i>
-          </a>
-
-          <a href="https://www.tiktok.com/@zartaa4" target="_blank" rel="noopener" class="tiktok" aria-label="TikTok">
-            <i class="fab fa-tiktok"></i>
-          </a>
-
-        </div>
-      </div>
-
-      <div class="footer-col">
-        <h4>Quick Links</h4>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="packages.html">Packages</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
-      </div>
-
-      <div class="footer-col">
-        <h4>Our Services</h4>
-        <a href="services.html">Wedding Styling</a>
-        <a href="services.html">Birthday Decoration</a>
-        <a href="services.html">Corporate Events</a>
-        <a href="services.html">Baby Shower Setup</a>
-        <a href="services.html">Custom Theme Design</a>
-      </div>
-
-      <div class="footer-col">
-        <h4>Contact</h4>
-
-        <p><i class="fa-solid fa-location-dot"></i> Sydney NSW, Australia</p>
-        <p><i class="fa-solid fa-envelope"></i> vivaeventssydney@gmail.com</p>
-        <p><i class="fa-brands fa-whatsapp"></i> WhatsApp Booking Available</p>
-
-        <a href="https://wa.me/message/VMZV2DOHDPECG1" target="_blank" rel="noopener" class="footer-btn">
-          <i class="fab fa-whatsapp"></i> Get Quote
-        </a>
-      </div>
-
-    </div>
-
-    <div class="footer-bottom">
-      <p>
-        © 2025 Viva Events. All Rights Reserved.<br>
-        <span class="designer">Designed by Kemya Askari</span>
-      </p>
-
-      <div class="footer-legal">
-        <a href="terms.html">Terms</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="refund.html">Refund</a>
-      </div>
-    </div>
-
-  </footer>
-
-  <!-- FLOATING BUTTONS -->
-  <div class="floating">
-
-    <a class="whatsapp" href="https://wa.me/message/VMZV2DOHDPECG1" target="_blank" rel="noopener" title="WhatsApp">
-      <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <a class="instagram" href="https://www.instagram.com/zartaa_askari" target="_blank" rel="noopener" title="Instagram">
-      <i class="fab fa-instagram"></i>
-    </a>
-
-    <a class="tiktok" href="https://www.tiktok.com/@zartaa4" target="_blank" rel="noopener" title="TikTok">
-      <i class="fab fa-tiktok"></i>
-    </a>
 
   </div>
+</section>
 
-  <!-- FORM TO WHATSAPP SCRIPT -->
-  <script>
-    document.getElementById("quoteForm").addEventListener("submit", function (e) {
-      e.preventDefault();
+<!-- QUICK CONTACT BUTTONS -->
+<section class="section">
+  <div class="container" style="text-align:center;">
 
-      const name = document.getElementById("name").value;
-      const phone = document.getElementById("phone").value;
-      const email = document.getElementById("email").value;
-      const eventType = document.getElementById("eventType").value;
-      const eventDate = document.getElementById("eventDate").value;
-      const location = document.getElementById("location").value;
-      const guests = document.getElementById("guests").value;
-      const packageType = document.getElementById("packageType").value;
-      const budget = document.getElementById("budget").value;
-      const message = document.getElementById("message").value;
+    <h2>Quick Contact Options</h2>
+    <p>Use WhatsApp for faster response or send a full request via email.</p>
 
-      const text =
-        "New Event Enquiry:%0A%0A" +
-        "Name: " + name + "%0A" +
-        "Phone: " + phone + "%0A" +
-        "Email: " + email + "%0A" +
-        "Event Type: " + eventType + "%0A" +
-        "Event Date: " + eventDate + "%0A" +
-        "Location: " + location + "%0A" +
-        "Guests: " + guests + "%0A" +
-        "Package: " + packageType + "%0A" +
-        "Budget: " + budget + "%0A" +
-        "Details: " + message;
+    <div class="hero-actions" style="justify-content:center; margin-top:20px;">
 
-      window.open("https://wa.me/message/VMZV2DOHDPECG1?text=" + text, "_blank");
-    });
-  </script>
+      <a href="https://wa.me/message/VMZV2DOHDPECG1" target="_blank" class="btn btn-primary">
+        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+      </a>
+
+      <a href="mailto:vivaeventssydney@gmail.com" class="btn btn-dark">
+        <i class="fa-solid fa-envelope"></i> Email Directly
+      </a>
+
+    </div>
+
+  </div>
+</section>
+<script src="js/script.js" defer></script>
+<div id="site-footer"></div>
 
 </body>
-
 </html>

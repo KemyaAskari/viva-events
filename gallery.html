@@ -6,8 +6,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="Viva Events gallery for weddings, birthdays, corporate events, baby showers and luxury event styling in Sydney NSW.">
-  <meta name="keywords" content="event planner Sydney, wedding planner NSW, birthday decoration Sydney, event styling Sydney, event gallery NSW">
+  <meta name="description" content="Explore the Viva Events gallery for weddings, birthdays, stages, corporate events and luxury event styling across Sydney NSW.">
+  <meta name="keywords" content="Viva Events gallery, event styling Sydney, wedding decoration Sydney, birthday decoration NSW, luxury event planner">
   <meta name="author" content="Viva Events">
   <meta name="robots" content="index, follow">
 
@@ -19,56 +19,7 @@
 
 <body>
 
-  <!-- TOP BAR -->
-  <div class="topbar">
-    <div class="container">
-      <span>📍 Sydney NSW | Weddings • Birthdays • Corporate Events</span>
-      <span>💬 Fast booking through WhatsApp | ✉️ vivaeventssydney@gmail.com</span>
-    </div>
-  </div>
-
-  <!-- HEADER -->
-  <header class="header">
-    <div class="container nav-wrap">
-
-      <a class="logo" href="index.html">
-        <img src="image/logo.png" alt="Viva Events Logo" class="logo-img">
-        <span class="logo-text">Viva Events</span>
-      </a>
-
-      <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false">
-        ☰
-      </button>
-
-      <nav class="nav" id="nav">
-
-        <div class="mobile-menu-head">
-          <div class="mobile-menu-brand">
-            <img src="image/logo.png" alt="Viva Events Logo" class="logo-img small">
-            <span>Viva Events</span>
-          </div>
-
-          <button id="menuCloseBtn" class="menu-close" type="button" aria-label="Close menu">
-            ✕
-          </button>
-        </div>
-
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="packages.html">Packages</a>
-        <a class="active" href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
-        <a href="terms.html">Terms</a>
-
-        <a class="nav-mobile-cta" href="https://wa.me/message/VMZV2DOHDPECG1" target="_blank" rel="noopener">
-          <i class="fab fa-whatsapp"></i> WhatsApp Quote
-        </a>
-
-      </nav>
-    </div>
-  </header>
-
+  <div id="site-header"></div>
   <div id="menuOverlay" class="menu-overlay"></div>
 
   <!-- HERO -->
@@ -76,13 +27,13 @@
     <div class="container hero-grid">
 
       <div>
-        <span class="badge">Gallery</span>
+        <span class="badge">Viva Events Gallery</span>
 
-        <h1>Event styling inspiration.</h1>
+        <h1>Luxury event styling inspiration.</h1>
 
         <p>
-          Explore wedding styling, birthday decorations, stage setups and luxury event designs.
-          Use these ideas to choose your theme, colours and package.
+          Explore our event styling ideas for weddings, birthdays, baby showers, stage designs
+          and luxury celebrations across Sydney NSW.
         </p>
 
         <div class="hero-actions">
@@ -90,23 +41,23 @@
             <i class="fab fa-whatsapp"></i> Book on WhatsApp
           </a>
 
-          <a class="btn btn-light" href="contact.html">
+          <a class="btn btn-secondary" href="contact.html">
             Get a Quote
           </a>
         </div>
       </div>
 
       <div class="image-slider" id="imageSlider">
-        <img src="image/wedding.jpeg" class="slide active" alt="Wedding event styling">
-        <img src="image/birthday.jpeg" class="slide" alt="Birthday decoration">
-        <img src="image/stage-4.jpeg" class="slide" alt="Stage decoration">
-        <img src="image/stage-2.jpeg" class="slide" alt="Luxury event stage">
+        <img src="image/wedding.jpeg" class="slide active" alt="Luxury wedding styling by Viva Events">
+        <img src="image/birthday.jpeg" class="slide" alt="Birthday decoration by Viva Events">
+        <img src="image/stage-4.jpeg" class="slide" alt="Stage decoration by Viva Events">
+        <img src="image/stage-2.jpeg" class="slide" alt="Luxury stage setup by Viva Events">
       </div>
 
     </div>
   </section>
 
-  <!-- GALLERY INTRO -->
+  <!-- INTRO CARDS -->
   <section class="section">
     <div class="container">
 
@@ -114,8 +65,8 @@
         <span>Our Work</span>
         <h2>Premium event gallery</h2>
         <p>
-          Click any photo to view it larger. These examples show styling ideas for weddings,
-          birthdays, corporate events and custom celebrations.
+          Browse our styling examples and choose the look, colour theme and setup style
+          you want for your special event.
         </p>
       </div>
 
@@ -124,7 +75,7 @@
         <div class="card">
           <div class="icon">💍</div>
           <h3>Wedding Styling</h3>
-          <p>Elegant backdrops, bridal tables, stage décor, floral styling and luxury reception setups.</p>
+          <p>Elegant backdrops, bridal tables, floral styling, stage décor and luxury reception setups.</p>
         </div>
 
         <div class="card">
@@ -136,7 +87,7 @@
         <div class="card">
           <div class="icon">✨</div>
           <h3>Stage & Custom Setups</h3>
-          <p>Premium stages, cultural celebrations, custom themes and formal event presentation.</p>
+          <p>Premium stages, cultural celebrations, formal events and custom theme styling.</p>
         </div>
 
       </div>
@@ -144,45 +95,45 @@
     </div>
   </section>
 
-  <!-- GALLERY GRID -->
+  <!-- PREMIUM GALLERY GRID -->
   <section class="section">
     <div class="container">
 
       <div class="section-title">
         <span>Photo Gallery</span>
         <h2>Choose your event inspiration</h2>
-        <p>Tell us which photo style you like when you request your quote.</p>
+        <p>Click any image to view it larger. Send us your favourite style when requesting a quote.</p>
       </div>
 
       <div class="gallery">
 
         <div onclick="openLightbox('image/wedding.jpeg')">
-          <img src="image/wedding.jpeg" alt="Wedding styling">
+          <img src="image/wedding.jpeg" alt="Wedding styling setup">
           <span>Wedding Styling</span>
         </div>
 
         <div onclick="openLightbox('image/birthday.jpeg')">
-          <img src="image/birthday.jpeg" alt="Birthday decoration">
+          <img src="image/birthday.jpeg" alt="Birthday decoration setup">
           <span>Birthday Décor</span>
         </div>
 
-        <div onclick="openLightbox('image/stage 1.jpeg')">
-          <img src="image/stage-1.jpeg" alt="Stage setup">
+        <div onclick="openLightbox('image/stage-1.jpeg')">
+          <img src="image/stage-1.jpeg" alt="Stage setup design">
           <span>Stage Setup</span>
         </div>
 
-        <div onclick="openLightbox('image/stage 2.jpeg')">
-          <img src="image/stage-2.jpeg" alt="Luxury stage">
+        <div onclick="openLightbox('image/stage-2.jpeg')">
+          <img src="image/stage-2.jpeg" alt="Luxury stage decoration">
           <span>Luxury Stage</span>
         </div>
 
-        <div onclick="openLightbox('image/stage 3.jpeg')">
-          <img src="image/stage-3.jpeg" alt="Event decoration">
+        <div onclick="openLightbox('image/stage-3.jpeg')">
+          <img src="image/stage-3.jpeg" alt="Premium event decoration">
           <span>Event Decoration</span>
         </div>
 
-        <div onclick="openLightbox('image/stage 4.jpeg')">
-          <img src="image/wedding.jpeg" alt="Custom theme decoration">
+        <div onclick="openLightbox('image/stage-4.jpeg')">
+          <img src="image/stage-4.jpeg" alt="Custom event theme styling">
           <span>Custom Theme</span>
         </div>
 
@@ -198,7 +149,7 @@
       <div class="section-title">
         <span>Planning Tip</span>
         <h2>How to use our gallery</h2>
-        <p>Use the gallery to explain your style clearly when contacting us.</p>
+        <p>Use these photos to explain your preferred theme, colour and event mood.</p>
       </div>
 
       <div class="steps">
@@ -207,7 +158,7 @@
           <span class="num">1</span>
           <div>
             <h3>Pick a style</h3>
-            <p>Choose the photo or design that matches your event theme, colour and mood.</p>
+            <p>Choose the photo that matches your event theme, colour and design feeling.</p>
           </div>
         </div>
 
@@ -215,7 +166,7 @@
           <span class="num">2</span>
           <div>
             <h3>Send your details</h3>
-            <p>Message us your event date, venue, guest number and preferred package.</p>
+            <p>Message us your event date, venue, guest number, package and budget.</p>
           </div>
         </div>
 
@@ -223,7 +174,7 @@
           <span class="num">3</span>
           <div>
             <h3>Get a quote</h3>
-            <p>We prepare a quote based on event size, design level, setup time and location.</p>
+            <p>We prepare a quote based on the event size, setup level, styling and location.</p>
           </div>
         </div>
 
@@ -239,8 +190,8 @@
       <div class="panel">
         <h2>Want this style for your event?</h2>
         <p>
-          Send us the photo style you like, your date, venue, guest number, theme colours and budget.
-          We will recommend a suitable package or custom quote.
+          Send us the photo style you like, your event date, venue, guest number,
+          theme colours and budget. We will recommend a suitable package or custom quote.
         </p>
 
         <ul class="list">
@@ -262,7 +213,7 @@
             <i class="fab fa-whatsapp"></i> Chat on WhatsApp
           </a>
 
-          <a class="btn btn-dark" href="packages.html">
+          <a class="btn btn-secondary" href="packages.html">
             View Packages
           </a>
         </div>
@@ -272,133 +223,11 @@
   </section>
 
   <!-- LIGHTBOX -->
-  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-    <button class="lightbox-close" type="button" aria-label="Close image">✕</button>
-    <img id="lightbox-img" src="image/wedding.jpeg" alt="Gallery image">
+  <div id="lightbox" onclick="closeLightbox()" style="display:none;">
+    <img id="lightbox-img" alt="Expanded gallery image">
   </div>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-
-    <div class="container footer-grid">
-
-      <div class="footer-col">
-        <div class="footer-logo">
-          <img src="image/logo.png" alt="Viva Events Logo">
-          <h3>Viva Events</h3>
-        </div>
-
-        <p>
-          Premium event planning, styling and decoration services across Sydney NSW.
-          We create beautiful weddings, birthdays and corporate events with luxury design.
-        </p>
-
-        <div class="footer-social">
-
-          <a href="https://wa.me/message/VMZV2DOHDPECG1" target="_blank" rel="noopener" class="whatsapp" aria-label="WhatsApp">
-            <i class="fab fa-whatsapp"></i>
-          </a>
-
-          <a href="https://www.instagram.com/zartaa_askari" target="_blank" rel="noopener" class="instagram" aria-label="Instagram">
-            <i class="fab fa-instagram"></i>
-          </a>
-
-          <a href="https://www.tiktok.com/@zartaa4" target="_blank" rel="noopener" class="tiktok" aria-label="TikTok">
-            <i class="fab fa-tiktok"></i>
-          </a>
-
-        </div>
-      </div>
-
-      <div class="footer-col">
-        <h4>Quick Links</h4>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="packages.html">Packages</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
-      </div>
-
-      <div class="footer-col">
-        <h4>Our Services</h4>
-        <a href="services.html">Wedding Styling</a>
-        <a href="services.html">Birthday Decoration</a>
-        <a href="services.html">Corporate Events</a>
-        <a href="services.html">Baby Shower Setup</a>
-        <a href="services.html">Custom Theme Design</a>
-      </div>
-
-      <div class="footer-col">
-        <h4>Contact</h4>
-
-        <p><i class="fa-solid fa-location-dot"></i> Sydney NSW, Australia</p>
-        <p><i class="fa-solid fa-envelope"></i> vivaeventssydney@gmail.com</p>
-        <p><i class="fa-brands fa-whatsapp"></i> WhatsApp Booking Available</p>
-
-        <a href="https://wa.me/message/VMZV2DOHDPECG1" target="_blank" rel="noopener" class="footer-btn">
-          <i class="fab fa-whatsapp"></i> Get Quote
-        </a>
-      </div>
-
-    </div>
-
-    <div class="footer-bottom">
-      <p>
-        © 2025 Viva Events. All Rights Reserved.<br>
-        <span class="designer">Designed by Kemya Askari</span>
-      </p>
-
-      <div class="footer-legal">
-        <a href="terms.html">Terms</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="refund.html">Refund</a>
-      </div>
-    </div>
-
-  </footer>
-
-  <!-- FLOATING BUTTONS -->
-  <div class="floating">
-
-    <a class="whatsapp" href="https://wa.me/message/VMZV2DOHDPECG1" target="_blank" rel="noopener" title="WhatsApp">
-      <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <a class="instagram" href="https://www.instagram.com/zartaa_askari" target="_blank" rel="noopener" title="Instagram">
-      <i class="fab fa-instagram"></i>
-    </a>
-
-    <a class="tiktok" href="https://www.tiktok.com/@zartaa4" target="_blank" rel="noopener" title="TikTok">
-      <i class="fab fa-tiktok"></i>
-    </a>
-
-  </div>
-
-  <!-- GALLERY SCRIPT -->
-  <script>
-    function openLightbox(src) {
-      const lightbox = document.getElementById("lightbox");
-      const lightboxImg = document.getElementById("lightbox-img");
-      lightboxImg.src = src;
-      lightbox.style.display = "flex";
-    }
-
-    function closeLightbox() {
-      document.getElementById("lightbox").style.display = "none";
-    }
-
-    const sliderImages = document.querySelectorAll(".image-slider .slide");
-    let currentSlide = 0;
-
-    if (sliderImages.length > 0) {
-      setInterval(() => {
-        sliderImages[currentSlide].classList.remove("active");
-        currentSlide = (currentSlide + 1) % sliderImages.length;
-        sliderImages[currentSlide].classList.add("active");
-      }, 3000);
-    }
-  </script>
+  <div id="site-footer"></div>
 
 </body>
 

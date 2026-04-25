@@ -1,517 +1,366 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <title>Services | Viva Events</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="Viva Events provides professional event planning, styling and decoration services in Sydney NSW for weddings, birthdays, baby showers, corporate events, cultural celebrations and custom themes.">
-  <meta name="keywords" content="event planner Sydney, wedding planner NSW, birthday decoration Sydney, corporate events Australia, event styling Sydney">
+  <meta name="description" content="Viva Events provides event styling and decoration services in Sydney NSW for weddings, birthdays, corporate events, baby showers, engagements and cultural celebrations.">
+  <meta name="keywords" content="event styling Sydney, wedding decoration Sydney, birthday decoration, corporate event styling, baby shower decoration NSW">
   <meta name="author" content="Viva Events">
   <meta name="robots" content="index, follow">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
   <link rel="stylesheet" href="css/style.css">
-  <script defer src="js/script.js"></script>
+  <script src="js/script.js" defer></script>
 </head>
 
 <body>
 
-  <!-- TOP BAR -->
-  <div class="topbar">
-    <div class="container">
-      <span>📍 Sydney NSW | Weddings • Birthdays • Corporate Events</span>
-      <span>💬 Fast booking through WhatsApp | ✉️ vivaeventssydney@gmail.com</span>
-    </div>
-  </div>
+  <div id="site-header"></div>
 
-  <!-- HEADER -->
-  <header class="header">
-    <div class="container nav-wrap">
-
-      <a class="logo" href="index.html">
-        <img src="image/logo.png" alt="Viva Events Logo" class="logo-img">
-        <span class="logo-text">Viva Events</span>
-      </a>
-
-      <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false">
-        ☰
-      </button>
-
-      <nav class="nav" id="nav">
-
-        <div class="mobile-menu-head">
-          <div class="mobile-menu-brand">
-            <img src="image/logo.png" alt="Viva Events Logo" class="logo-img small">
-            <span>Viva Events</span>
-          </div>
-
-          <button id="menuCloseBtn" class="menu-close" type="button" aria-label="Close menu">
-            ✕
-          </button>
-        </div>
-
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a class="active" href="services.html">Services</a>
-        <a href="packages.html">Packages</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
-        <a href="terms.html">Terms</a>
-
-        <a class="nav-mobile-cta" href="https://wa.me/message/VMZV2DOHDPECG1" target="_blank" rel="noopener">
-          <i class="fab fa-whatsapp"></i> WhatsApp Quote
-        </a>
-
-      </nav>
-    </div>
-  </header>
-
-  <div id="menuOverlay" class="menu-overlay"></div>
-
-  <!-- HERO -->
   <section class="hero">
-    <div class="container">
+    <div class="container hero-grid">
+      <div>
+        <span class="badge">Our Services</span>
+        <h1>Premium styling for every special occasion.</h1>
+        <p>
+          Viva Events provides elegant event styling and decoration for weddings, birthdays,
+          corporate events, baby showers, engagements and cultural celebrations across Sydney NSW.
+        </p>
 
-      <span class="badge">Services</span>
+        <div class="hero-actions">
+          <a href="contact.html" class="btn btn-primary">
+            <i class="fa-solid fa-envelope"></i> Request Your Quote
+          </a>
 
-      <h1>Professional event planning and decoration services.</h1>
-
-      <p>
-        Viva Events provides beautiful, organised and premium event styling for weddings,
-        birthdays, baby showers, corporate events, cultural celebrations and custom themes across Sydney NSW.
-      </p>
-
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="https://wa.me/message/VMZV2DOHDPECG1" target="_blank" rel="noopener">
-          <i class="fab fa-whatsapp"></i> Ask for a Quote
-        </a>
-
-        <a class="btn btn-light" href="packages.html">
-          View Packages
-        </a>
+          <a href="packages.html" class="btn btn-secondary">
+            View Packages
+          </a>
+        </div>
       </div>
 
+      <div class="image-slider">
+        <img src="image/wedding.jpeg" class="slide active" alt="Wedding event styling">
+        <img src="image/birthday.jpeg" class="slide" alt="Birthday party decoration">
+        <img src="image/stage-1.jpeg" class="slide" alt="Corporate event setup">
+        <img src="image/stage-2.jpeg" class="slide" alt="Luxury event decoration">
+      </div>
     </div>
   </section>
 
-  <!-- SERVICES INTRO -->
   <section class="section">
     <div class="container">
-
       <div class="section-title">
-        <span>Our Services</span>
-        <h2>Everything your event needs</h2>
+        <span>Signature Services</span>
+        <h2>Event styling tailored to your theme, venue and budget</h2>
         <p>
-          Choose a service below or contact us for a custom styling package based on your event,
-          budget, venue and theme.
+          Choose from our core services or request a custom styling quote for your event.
+        </p>
+      </div>
+
+      <div class="services-showcase">
+        <a href="contact.html" class="service-feature">
+          <img src="image/background.jpeg" alt="Wedding styling and decoration">
+          <div>
+            <span>Signature Service</span>
+            <h3>Wedding Styling</h3>
+            <p>
+              Elegant backdrops, stage setup, bridal table styling, floral details and luxury reception presentation.
+            </p>
+          </div>
+        </a>
+
+        <a href="contact.html" class="service-feature">
+          <img src="image/birthday.jpeg" alt="Birthday event decoration">
+          <div>
+            <span>Private Events</span>
+            <h3>Birthday Decorations</h3>
+            <p>
+              Custom birthday themes, balloon styling, cake tables, photo corners and personalised event details.
+            </p>
+          </div>
+        </a>
+
+        <a href="contact.html" class="service-feature">
+          <img src="image/stage-1.jpeg" alt="Corporate event styling">
+          <div>
+            <span>Business Events</span>
+            <h3>Corporate Events</h3>
+            <p>
+              Professional styling for launches, work functions, networking events, brand activations and formal setups.
+            </p>
+          </div>
+        </a>
+      </div>
+
+      <div class="service-mini-row">
+        <a href="contact.html">🍼 Baby Showers</a>
+        <a href="contact.html">💍 Engagements</a>
+        <a href="contact.html">🌙 Cultural Events</a>
+      </div>
+
+      <div class="section-action">
+        <a href="contact.html" class="btn btn-primary">Request Service Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark">
+    <div class="container">
+      <div class="section-title">
+        <span>What We Can Style</span>
+        <h2>Beautiful event areas designed for photos and guests</h2>
+        <p>
+          We help create feature areas that make your event feel complete, polished and memorable.
         </p>
       </div>
 
       <div class="cards">
-
-        <!-- WEDDING -->
         <div class="card">
-          <img src="image/wedding.jpeg" alt="Wedding Styling">
-          <h3>Wedding Styling</h3>
+          <div class="icon">🎀</div>
+          <h3>Backdrops</h3>
           <p>
-            Elegant wedding decoration including bridal table, backdrop, stage setup,
-            floral styling, aisle styling, candles, lighting and reception presentation.
+            Modern backdrop styling for weddings, birthdays, baby showers and corporate events.
           </p>
-          <a class="btn btn-primary card-btn" href="https://wa.me/message/VMZV2DOHDPECG1" target="_blank" rel="noopener">
-            Ask About Weddings
-          </a>
         </div>
 
-        <!-- BIRTHDAY -->
         <div class="card">
-          <img src="image/birthday.jpeg" alt="Birthday Events">
-          <h3>Birthday Events</h3>
+          <div class="icon">🎂</div>
+          <h3>Cake Tables</h3>
           <p>
-            Custom birthday themes for kids and adults, balloon styling, cake table,
-            signage, photo area, backdrop and colour-coordinated decoration.
+            Clean and elegant cake table presentation with theme colours, décor and feature styling.
           </p>
-          <a class="btn btn-primary card-btn" href="https://wa.me/message/VMZV2DOHDPECG1" target="_blank" rel="noopener">
-            Ask About Birthdays
-          </a>
         </div>
 
-        <!-- CORPORATE -->
         <div class="card">
-          <img src="image/stage-1.jpeg" alt="Corporate Events">
-          <h3>Corporate Events</h3>
+          <div class="icon">🌸</div>
+          <h3>Floral Styling</h3>
           <p>
-            Professional styling for business launches, office parties, awards nights,
-            branded backdrops, stage design and formal guest presentation.
+            Floral details, soft decorative features and luxury styling elements based on your event theme.
           </p>
-          <a class="btn btn-primary card-btn" href="https://wa.me/message/VMZV2DOHDPECG1" target="_blank" rel="noopener">
-            Ask About Corporate
-          </a>
         </div>
 
-        <!-- BABY SHOWER -->
         <div class="card">
-          <div class="icon">🍼</div>
-          <h3>Baby Showers</h3>
+          <div class="icon">💡</div>
+          <h3>Lighting Details</h3>
           <p>
-            Soft and elegant baby shower styling including balloons, flowers,
-            dessert table setup, welcome signage, chair styling and photo areas.
+            Decorative lighting, warm ambience and feature accents to improve event atmosphere.
           </p>
-          <a class="btn btn-primary card-btn" href="https://wa.me/message/VMZV2DOHDPECG1" target="_blank" rel="noopener">
-            Ask About Baby Showers
-          </a>
         </div>
 
-        <!-- CULTURAL EVENTS -->
         <div class="card">
-          <div class="icon">🌙</div>
-          <h3>Cultural Events</h3>
+          <div class="icon">📸</div>
+          <h3>Photo Areas</h3>
           <p>
-            Respectful styling for family, cultural and community celebrations with
-            custom colours, traditional touches, stage setup and guest presentation.
+            Guest photo corners, feature walls and statement areas designed for memorable photos.
           </p>
-          <a class="btn btn-primary card-btn" href="https://wa.me/message/VMZV2DOHDPECG1" target="_blank" rel="noopener">
-            Ask About Cultural Events
-          </a>
         </div>
 
-        <!-- CUSTOM THEMES -->
         <div class="card">
-          <div class="icon">🎨</div>
-          <h3>Custom Themes</h3>
+          <div class="icon">🏛️</div>
+          <h3>Stage Setup</h3>
           <p>
-            Send your inspiration photos, colours, theme idea and budget.
-            We can prepare a custom event styling plan that suits your celebration.
+            Stage and presentation areas for weddings, cultural events, formal functions and celebrations.
           </p>
-          <a class="btn btn-primary card-btn" href="https://wa.me/message/VMZV2DOHDPECG1" target="_blank" rel="noopener">
-            Ask About Custom Themes
-          </a>
         </div>
-
       </div>
-
     </div>
   </section>
 
-  <!-- INCLUSIONS -->
-  <section class="section dark">
-    <div class="container">
-
-      <div class="section-title">
-        <span>Service Inclusions</span>
-        <h2>What we can include</h2>
-        <p>Each event is different, but these are common items customers request.</p>
-      </div>
-
-      <div class="legal-grid">
-
-        <div class="legal-box">
-          <h3>Décor & Styling</h3>
-          <ul>
-            <li>Backdrops and feature walls</li>
-            <li>Balloon garlands and balloon displays</li>
-            <li>Floral styling and greenery</li>
-            <li>Table styling and centrepieces</li>
-            <li>Candles, signage and decorative props</li>
-          </ul>
-        </div>
-
-        <div class="legal-box">
-          <h3>Event Setup</h3>
-          <ul>
-            <li>Setup planning and access timing</li>
-            <li>Venue layout discussion</li>
-            <li>Stage or main display area styling</li>
-            <li>Cake table and dessert table setup</li>
-            <li>Pack-down guidance where agreed</li>
-          </ul>
-        </div>
-
-        <div class="legal-box">
-          <h3>Customer Support</h3>
-          <ul>
-            <li>Package and quote explanation</li>
-            <li>Theme and colour suggestions</li>
-            <li>Event checklist before booking</li>
-            <li>Clear communication through WhatsApp</li>
-            <li>Advice about what details to confirm with the venue</li>
-          </ul>
-        </div>
-
-        <div class="legal-box">
-          <h3>Custom Extras</h3>
-          <ul>
-            <li>Luxury flowers or custom signage</li>
-            <li>Extra backdrop or photo area</li>
-            <li>Lighting or special feature décor</li>
-            <li>Large venue or cultural setup</li>
-            <li>Branding for corporate events</li>
-          </ul>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- WHAT CUSTOMER MUST SEND -->
   <section class="section">
     <div class="container split">
-
       <div class="panel">
-        <h2>What customers should send us</h2>
+        <h2>Wedding styling</h2>
         <p>
-          To prepare the best quote, please send as much information as possible.
-          This helps us recommend the right package and avoid confusion later.
+          We style wedding spaces with elegant backdrops, reception presentation, bridal table
+          decoration, stage styling and feature areas for photos.
         </p>
 
         <ul class="list">
-          <li>Event type and event date</li>
-          <li>Venue name, suburb and address</li>
-          <li>Guest number and event time</li>
-          <li>Theme, colours and inspiration photos</li>
-          <li>Preferred package or budget range</li>
-          <li>Venue access time and pack-down time</li>
-          <li>Parking, lift access, stairs or loading information</li>
-          <li>Power access if lighting or signs are needed</li>
-          <li>Any venue rules about candles, balloons, confetti or hanging décor</li>
+          <li>Wedding stage and backdrop styling</li>
+          <li>Bridal table and cake table presentation</li>
+          <li>Floral, balloon or fabric styling options</li>
+          <li>Luxury colour theme support</li>
+          <li>Venue access and setup planning</li>
         </ul>
+
+        <a href="contact.html" class="btn btn-primary">Request Wedding Quote</a>
       </div>
 
       <div class="panel">
-        <h2>What affects the final quote?</h2>
+        <h2>Birthday and private events</h2>
         <p>
-          Final pricing depends on the event size, styling level and venue requirements.
+          We design birthday and private celebration setups for children, adults and family events,
+          using theme colours, balloon styling and beautiful feature areas.
         </p>
 
         <ul class="list">
-          <li>Event location and travel distance</li>
-          <li>Number of guests and venue size</li>
-          <li>Complexity of theme and decoration</li>
-          <li>Custom flowers, signage or props</li>
-          <li>Setup and pack-down time</li>
-          <li>Last-minute changes or extra requests</li>
-          <li>Venue restrictions or difficult access</li>
+          <li>Kids and adult birthday themes</li>
+          <li>Balloon garlands and feature styling</li>
+          <li>Cake table and photo area decoration</li>
+          <li>Personalised colours and theme details</li>
+          <li>Small to medium event setup options</li>
         </ul>
-      </div>
 
+        <a href="contact.html" class="btn btn-secondary">Request Birthday Quote</a>
+      </div>
     </div>
   </section>
 
-  <!-- PROCESS -->
   <section class="section">
-    <div class="container">
+    <div class="container split">
+      <div class="panel">
+        <h2>Corporate event styling</h2>
+        <p>
+          We support businesses with clean, professional styling suitable for launches,
+          networking events, staff events and formal corporate functions.
+        </p>
 
+        <ul class="list">
+          <li>Brand-friendly event presentation</li>
+          <li>Professional backdrop and feature areas</li>
+          <li>Guest welcome and photo areas</li>
+          <li>Clean styling for formal business settings</li>
+          <li>Setup planning around venue access times</li>
+        </ul>
+
+        <a href="contact.html" class="btn btn-primary">Request Corporate Quote</a>
+      </div>
+
+      <div class="panel">
+        <h2>Baby showers and cultural events</h2>
+        <p>
+          We can create soft, elegant or custom theme styling for baby showers, family celebrations
+          and cultural events with respectful presentation and customer-focused planning.
+        </p>
+
+        <ul class="list">
+          <li>Soft baby shower colours and feature styling</li>
+          <li>Family and community celebration décor</li>
+          <li>Cultural theme support</li>
+          <li>Custom backdrop and table styling</li>
+          <li>Flexible options based on your venue and budget</li>
+        </ul>
+
+        <a href="contact.html" class="btn btn-secondary">Request Custom Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark">
+    <div class="container">
       <div class="section-title">
-        <span>Booking Process</span>
-        <h2>How our service works</h2>
-        <p>We keep the process simple and clear from enquiry to event day.</p>
+        <span>Service Process</span>
+        <h2>How we prepare your event styling</h2>
+        <p>
+          Clear steps help us understand your event and prepare the right styling option.
+        </p>
       </div>
 
       <div class="steps">
-
         <div class="step">
           <span class="num">1</span>
           <div>
-            <h3>Send Event Details</h3>
-            <p>Message us your date, venue, guest number, theme, budget and preferred package.</p>
+            <h3>Tell Us Your Event Details</h3>
+            <p>Send event type, date, venue, guest count, preferred style, colours and budget range.</p>
           </div>
         </div>
 
         <div class="step">
           <span class="num">2</span>
           <div>
-            <h3>Receive Options</h3>
-            <p>We explain suitable services, package inclusions, estimated price and setup requirements.</p>
+            <h3>Choose a Styling Direction</h3>
+            <p>We recommend a package or custom styling approach based on your event needs.</p>
           </div>
         </div>
 
         <div class="step">
           <span class="num">3</span>
           <div>
-            <h3>Confirm Booking</h3>
-            <p>Once the quote is accepted and deposit is paid, your event date is secured.</p>
+            <h3>Confirm Venue Requirements</h3>
+            <p>We check access time, parking, loading area, power access and decoration restrictions.</p>
           </div>
         </div>
 
         <div class="step">
           <span class="num">4</span>
           <div>
-            <h3>Event Setup</h3>
-            <p>We prepare the styling items and complete the agreed setup for your event.</p>
+            <h3>Style the Event</h3>
+            <p>We complete the agreed styling and setup according to the confirmed plan.</p>
           </div>
         </div>
-
       </div>
-
     </div>
   </section>
 
-  <!-- FAQ -->
   <section class="section">
     <div class="container">
-
       <div class="section-title">
-        <span>FAQ</span>
-        <h2>Service questions</h2>
-        <p>Helpful information customers often need before requesting a quote.</p>
+        <span>Customer Information</span>
+        <h2>What we need before quoting</h2>
+        <p>
+          Please provide clear details so we can recommend the right styling option and prepare an accurate quote.
+        </p>
       </div>
 
       <div class="legal-grid">
-
         <div class="legal-box">
-          <h3>Can I request a custom theme?</h3>
-          <p>Yes. Send your inspiration photos, colours and ideas so we can prepare a custom design option.</p>
+          <h3>Event Details</h3>
+          <p>
+            Include your event type, date, venue/suburb, guest numbers and preferred setup time.
+          </p>
         </div>
 
         <div class="legal-box">
-          <h3>Do you provide full event planning?</h3>
-          <p>We focus on styling, decoration and setup. We can also support planning details related to the event design and setup needs.</p>
+          <h3>Theme & Colours</h3>
+          <p>
+            Send inspiration images, colour choices, cultural requirements or any special styling preferences.
+          </p>
         </div>
 
         <div class="legal-box">
-          <h3>Can you style outdoor events?</h3>
-          <p>Outdoor styling may be possible depending on weather, venue rules, safety and equipment access.</p>
+          <h3>Venue Rules</h3>
+          <p>
+            Confirm access times, parking, loading area, lift access, power points and decoration rules.
+          </p>
         </div>
 
         <div class="legal-box">
-          <h3>Do you travel outside Sydney?</h3>
-          <p>Selected NSW areas may be available. Extra travel costs may apply depending on location.</p>
+          <h3>Budget Range</h3>
+          <p>
+            A budget range helps us recommend the most suitable package or custom styling option.
+          </p>
         </div>
-
       </div>
-
     </div>
   </section>
 
-  <!-- CTA -->
   <section class="section dark">
     <div class="container" style="text-align:center;">
-
       <span class="badge">Ready to plan?</span>
 
       <h2 style="font-size:clamp(2rem,5vw,4rem); margin:20px 0;">
-        Tell us your event idea.
+        Let’s style your next event.
       </h2>
 
-      <p style="max-width:700px; margin:auto;">
-        Message us your event date, venue, guest number, theme and budget.
-        We will recommend the best service or package for your event.
+      <p style="max-width:720px; margin:auto;">
+        Send your event details and we will help you choose the right styling service, package and setup plan.
       </p>
 
       <div class="hero-actions" style="justify-content:center;">
-        <a href="https://wa.me/message/VMZV2DOHDPECG1" class="btn btn-primary" target="_blank" rel="noopener">
-          <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+        <a href="contact.html" class="btn btn-primary">
+          <i class="fa-solid fa-envelope"></i> Request Your Quote
         </a>
 
-        <a href="contact.html" class="btn btn-light">
-          Contact Form
+        <a href="packages.html" class="btn btn-secondary">
+          View Packages
         </a>
       </div>
-
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-
-    <div class="container footer-grid">
-
-      <div class="footer-col">
-        <div class="footer-logo">
-          <img src="image/logo.png" alt="Viva Events Logo">
-          <h3>Viva Events</h3>
-        </div>
-
-        <p>
-          Premium event planning, styling and decoration services across Sydney NSW.
-          We create beautiful weddings, birthdays and corporate events with luxury design.
-        </p>
-
-        <div class="footer-social">
-
-          <a href="https://wa.me/message/VMZV2DOHDPECG1" target="_blank" rel="noopener" class="whatsapp" aria-label="WhatsApp">
-            <i class="fab fa-whatsapp"></i>
-          </a>
-
-          <a href="https://www.instagram.com/zartaa_askari" target="_blank" rel="noopener" class="instagram" aria-label="Instagram">
-            <i class="fab fa-instagram"></i>
-          </a>
-
-          <a href="https://www.tiktok.com/@zartaa4" target="_blank" rel="noopener" class="tiktok" aria-label="TikTok">
-            <i class="fab fa-tiktok"></i>
-          </a>
-
-        </div>
-      </div>
-
-      <div class="footer-col">
-        <h4>Quick Links</h4>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="packages.html">Packages</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
-      </div>
-
-      <div class="footer-col">
-        <h4>Our Services</h4>
-        <a href="services.html">Wedding Styling</a>
-        <a href="services.html">Birthday Decoration</a>
-        <a href="services.html">Corporate Events</a>
-        <a href="services.html">Baby Shower Setup</a>
-        <a href="services.html">Custom Theme Design</a>
-      </div>
-
-      <div class="footer-col">
-        <h4>Contact</h4>
-
-        <p><i class="fa-solid fa-location-dot"></i> Sydney NSW, Australia</p>
-        <p><i class="fa-solid fa-envelope"></i> vivaeventssydney@gmail.com</p>
-        <p><i class="fa-brands fa-whatsapp"></i> WhatsApp Booking Available</p>
-
-        <a href="https://wa.me/message/VMZV2DOHDPECG1" target="_blank" rel="noopener" class="footer-btn">
-          <i class="fab fa-whatsapp"></i> Get Quote
-        </a>
-      </div>
-
-    </div>
-
-    <div class="footer-bottom">
-      <p>
-        © 2025 Viva Events. All Rights Reserved.<br>
-        <span class="designer">Designed by Kemya Askari</span>
-      </p>
-
-      <div class="footer-legal">
-        <a href="terms.html">Terms</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="refund.html">Refund</a>
-      </div>
-    </div>
-
-  </footer>
-
-  <!-- FLOATING BUTTONS -->
-  <div class="floating">
-
-    <a class="whatsapp" href="https://wa.me/message/VMZV2DOHDPECG1" target="_blank" rel="noopener" title="WhatsApp">
-      <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <a class="instagram" href="https://www.instagram.com/zartaa_askari" target="_blank" rel="noopener" title="Instagram">
-      <i class="fab fa-instagram"></i>
-    </a>
-
-    <a class="tiktok" href="https://www.tiktok.com/@zartaa4" target="_blank" rel="noopener" title="TikTok">
-      <i class="fab fa-tiktok"></i>
-    </a>
-
-  </div>
+  <div id="site-footer"></div>
 
 </body>
-
 </html>
