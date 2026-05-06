@@ -2,135 +2,366 @@
 <html lang="en">
 <head>
   <title>Contact | Viva Events</title>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="Contact Viva Events for event planning, styling and decoration services in Sydney NSW.">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2324776541170272"
-      crossorigin="anonymous"></script>
+  <meta name="description" content="Contact Viva Events for luxury event planning, styling and decoration services in Sydney NSW for weddings, birthdays, baby showers and corporate events.">
+
+  <meta name="keywords" content="contact Viva Events, event planner Sydney, wedding styling Sydney, birthday decoration Sydney">
+
+  <meta name="author" content="Viva Events">
+
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="Contact Viva Events | Event Styling Sydney NSW">
+  <meta property="og:description" content="Contact Viva Events for luxury event styling and decoration services across Sydney NSW.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="image/wedding.jpeg">
+
   <meta name="google-adsense-account" content="ca-pub-2324776541170272">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <script async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2324776541170272"
+    crossorigin="anonymous">
+  </script>
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <link rel="stylesheet" href="css/style.css">
+
   <script defer src="js/script.js"></script>
+  <link rel="icon" type="image/png" href="image/favicon.png">
 </head>
 
 <body>
 
-<div id="site-header"></div>
+  <div id="site-header"></div>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="container" style="text-align:center;">
-    <span class="badge">Contact Us</span>
-    <h1>Plan your event with confidence</h1>
-    <p>
-      Send your event details and we will help you choose the best styling and package.
-    </p>
-  </div>
-</section>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
 
-<!-- CONTACT SECTION -->
-<section class="section">
-  <div class="container split">
+      <div>
+        <span class="badge">Contact Viva Events</span>
 
-    <!-- LEFT INFO -->
-    <div class="panel">
-      <h2>Get in touch</h2>
-      <p>
-        We respond to all enquiries as soon as possible. Please include clear details so we can give you an accurate quote.
+        <h1>Plan your event with confidence.</h1>
+
+        <p>
+          Viva Events provides luxury event styling and decoration services across Sydney NSW.
+          Send your event details and we will help you choose a suitable package, styling option
+          and setup plan for your special event.
+        </p>
+
+        <div class="hero-actions">
+
+          <a href="https://wa.me/message/VMZV2DOHDPECG1"
+             target="_blank"
+             class="btn btn-primary">
+
+            <i class="fab fa-whatsapp"></i>
+            Chat on WhatsApp
+          </a>
+
+          <a href="mailto:vivaeventssydney@gmail.com"
+             class="btn btn-dark">
+
+            <i class="fa-solid fa-envelope"></i>
+            Email Us
+          </a>
+
+        </div>
+      </div>
+
+      <div class="image-slider">
+        <img src="image/wedding.jpeg"
+             class="slide active"
+             alt="Wedding event styling">
+
+        <img src="image/modern.jpeg"
+             class="slide"
+             alt="Modern luxury event setup">
+
+        <img src="image/stage-1.jpeg"
+             class="slide"
+             alt="Stage decoration setup">
+
+        <img src="image/pinl-blue.jpeg"
+             class="slide"
+             alt="Pink and blue themed event styling">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="section">
+
+    <div class="container split">
+
+      <!-- LEFT -->
+      <div class="panel">
+
+        <h2>Get in touch</h2>
+
+        <p>
+          We respond to enquiries as soon as possible. Please provide clear event details
+          so we can prepare an accurate quote and suitable styling recommendation.
+        </p>
+
+        <ul class="list">
+          <li>
+            <strong>Email:</strong>
+            vivaeventssydney@gmail.com
+          </li>
+
+          <li>
+            <strong>Location:</strong>
+            Sydney NSW
+          </li>
+
+          <li>
+            <strong>Services:</strong>
+            Weddings, Birthdays, Corporate Events, Baby Showers, Engagements and Cultural Events
+          </li>
+        </ul>
+
+        <h3 style="margin-top:25px;">
+          Information to include
+        </h3>
+
+        <ul class="list">
+          <li>Event type</li>
+          <li>Event date and time</li>
+          <li>Venue and suburb</li>
+          <li>Estimated guest numbers</li>
+          <li>Theme colours or inspiration</li>
+          <li>Package preference or budget</li>
+          <li>Venue access or decoration rules</li>
+        </ul>
+
+      </div>
+
+      <!-- RIGHT -->
+      <div class="panel">
+
+        <h2>Send your request</h2>
+
+        <form id="quoteForm" class="form">
+
+          <input type="text"
+                 id="name"
+                 placeholder="Full Name"
+                 required>
+
+          <input type="tel"
+                 id="phone"
+                 placeholder="Phone Number"
+                 required>
+
+          <input type="email"
+                 id="email"
+                 placeholder="Email Address"
+                 required>
+
+          <select id="eventType" required>
+
+            <option value="">
+              Select Event Type
+            </option>
+
+            <option>
+              Wedding
+            </option>
+
+            <option>
+              Birthday
+            </option>
+
+            <option>
+              Corporate Event
+            </option>
+
+            <option>
+              Baby Shower
+            </option>
+
+            <option>
+              Engagement
+            </option>
+
+            <option>
+              Cultural Event
+            </option>
+
+            <option>
+              Other
+            </option>
+
+          </select>
+
+          <input type="date"
+                 id="eventDate"
+                 required>
+
+          <input type="text"
+                 id="location"
+                 placeholder="Event Location / Venue"
+                 required>
+
+          <input type="number"
+                 id="guests"
+                 placeholder="Number of Guests">
+
+          <select id="packageType">
+
+            <option value="">
+              Select Package
+            </option>
+
+            <option>
+              Essential Collection
+            </option>
+
+            <option>
+              Signature Collection
+            </option>
+
+            <option>
+              Luxury Collection
+            </option>
+
+            <option>
+              Custom Styling
+            </option>
+
+          </select>
+
+          <input type="text"
+                 id="budget"
+                 placeholder="Budget Range (Optional)">
+
+          <textarea id="message"
+                    rows="6"
+                    placeholder="Theme ideas, colours, setup requirements, venue rules, parking information or special requests"></textarea>
+
+          <button class="btn btn-primary"
+                  type="submit">
+
+            <i class="fa-solid fa-paper-plane"></i>
+            Send Your Request
+
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- QUICK CONTACT -->
+  <section class="section dark">
+
+    <div class="container" style="text-align:center;">
+
+      <span class="badge">
+        Quick Contact
+      </span>
+
+      <h2>
+        Need a faster response?
+      </h2>
+
+      <p style="max-width:720px; margin:auto;">
+        Contact Viva Events directly through WhatsApp or email to discuss your event,
+        styling ideas and preferred booking date.
       </p>
 
-      <ul class="list">
-        <li><strong>Email:</strong> vivaeventssydney@gmail.com</li>
-        <li><strong>Location:</strong> Sydney NSW</li>
-        <li><strong>Services:</strong> Weddings, Birthdays, Corporate Events, Baby Showers</li>
-      </ul>
+      <div class="hero-actions"
+           style="justify-content:center; margin-top:25px;">
 
-      <h3 style="margin-top:20px;">What to include:</h3>
-      <ul class="list">
-        <li>Event type (wedding, birthday, etc.)</li>
-        <li>Event date</li>
-        <li>Venue & suburb</li>
-        <li>Guest numbers</li>
-        <li>Theme or colours</li>
-        <li>Budget range (optional)</li>
-      </ul>
-    </div>
+        <a href="https://wa.me/message/VMZV2DOHDPECG1"
+           target="_blank"
+           class="btn btn-primary">
 
-    <!-- RIGHT FORM -->
-    <div class="panel">
+          <i class="fab fa-whatsapp"></i>
+          WhatsApp Chat
+        </a>
 
-      <h2>Send your request</h2>
+        <a href="mailto:vivaeventssydney@gmail.com"
+           class="btn btn-light">
 
-      <form id="quoteForm" class="form">
+          <i class="fa-solid fa-envelope"></i>
+          Send Email
+        </a>
 
-        <input type="text" id="name" placeholder="Full Name" required>
-
-        <input type="tel" id="phone" placeholder="Phone Number" required>
-
-        <input type="email" id="email" placeholder="Email Address" required>
-
-        <select id="eventType" required>
-          <option value="">Select Event Type</option>
-          <option>Wedding</option>
-          <option>Birthday</option>
-          <option>Corporate Event</option>
-          <option>Baby Shower</option>
-          <option>Other</option>
-        </select>
-
-        <input type="date" id="eventDate" required>
-
-        <input type="text" id="location" placeholder="Event Location (Suburb / Venue)" required>
-
-        <input type="number" id="guests" placeholder="Number of Guests">
-
-        <select id="packageType">
-          <option value="">Select Package</option>
-          <option>Basic</option>
-          <option>Standard</option>
-          <option>Premium</option>
-          <option>Custom</option>
-        </select>
-
-        <input type="text" id="budget" placeholder="Budget Range (Optional)">
-
-        <textarea id="message" placeholder="Theme, colours, ideas, venue rules, setup time, parking or any special requests"></textarea>
-
-        <button class="btn btn-primary" type="submit">
-          <i class="fa-solid fa-paper-plane"></i> Send Your Request
-        </button>
-
-      </form>
+      </div>
 
     </div>
 
-  </div>
-</section>
+  </section>
 
-<!-- QUICK CONTACT BUTTONS -->
-<section class="section">
-  <div class="container" style="text-align:center;">
+  <!-- FAQ -->
+  <section class="section">
 
-    <h2>Quick Contact Options</h2>
-    <p>Use WhatsApp for faster response or send a full request via email.</p>
+    <div class="container">
 
-    <div class="hero-actions" style="justify-content:center; margin-top:20px;">
+      <div class="section-title">
 
-      <a href="https://wa.me/message/VMZV2DOHDPECG1" target="_blank" class="btn btn-primary">
-        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-      </a>
+        <span>Frequently Asked Questions</span>
 
-      <a href="mailto:vivaeventssydney@gmail.com" class="btn btn-dark">
-        <i class="fa-solid fa-envelope"></i> Email Directly
-      </a>
+        <h2>Helpful booking information</h2>
+
+        <p>
+          Common questions customers ask before confirming their booking.
+        </p>
+
+      </div>
+
+      <div class="legal-grid">
+
+        <div class="legal-box">
+          <h3>How early should I book?</h3>
+
+          <p>
+            We recommend booking early to secure your preferred event date and styling package.
+          </p>
+        </div>
+
+        <div class="legal-box">
+          <h3>Do you travel across Sydney?</h3>
+
+          <p>
+            Yes. Viva Events provides styling services across many Sydney suburbs and surrounding areas.
+          </p>
+        </div>
+
+        <div class="legal-box">
+          <h3>Can themes be customised?</h3>
+
+          <p>
+            Yes. We can customise colours, styling themes, feature areas and decorative details.
+          </p>
+        </div>
+
+        <div class="legal-box">
+          <h3>Do you provide setup services?</h3>
+
+          <p>
+            Yes. We handle setup planning and event styling according to the confirmed package.
+          </p>
+        </div>
+
+      </div>
 
     </div>
 
-  </div>
-</section>
-<script src="js/script.js" defer></script>
-<div id="site-footer"></div>
+  </section>
+
+  <div id="site-footer"></div>
 
 </body>
 </html>

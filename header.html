@@ -1,51 +1,106 @@
 <div class="topbar">
-  <div class="container">
-    <span>📍 Sydney NSW | Weddings • Birthdays • Corporate Events</span>
-    <span>✉️ vivaeventssydney@gmail.com</span>
+
+  <div class="container topbar-content">
+
+    <span>
+      📍 Sydney NSW | Weddings • Engagements • Corporate Events
+    </span>
+
+    <a href="mailto:vivaeventssydney@gmail.com" class="topbar-email">
+      ✉️ vivaeventssydney@gmail.com
+    </a>
+
   </div>
+
 </div>
 
 <header class="header">
+
   <div class="container nav-wrap">
 
-    <a class="logo" href="index.html">
+    <!-- LOGO -->
+    <a class="logo" href="index.html" aria-label="Viva Events Home">
+
       <div class="logo-circle">
-        <img src="image/logo.png" alt="Viva Events Logo" class="logo-img">
+        <img src="image/favicon.png"
+             alt="Viva Events Logo"
+             class="logo-img">
       </div>
 
       <div class="logo-name">
-        <span class="logo-text">Viva Events</span>
-        <span class="logo-subtitle">Design & Décor</span>
+
+        <span class="logo-text">
+          Viva Events
+        </span>
+
+        <span class="logo-subtitle">
+          Event Styling & Décor
+        </span>
+
       </div>
+
     </a>
 
-    <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false">
+    <!-- MOBILE MENU BUTTON -->
+    <button class="menu-btn"
+            id="menuBtn"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="nav">
+
       <span></span>
       <span></span>
       <span></span>
+
     </button>
 
+    <!-- NAVIGATION -->
     <nav class="nav" id="nav">
+
+      <!-- MOBILE HEADER -->
       <div class="mobile-menu-head">
+
         <div class="mobile-menu-brand">
-          <img src="image/logo.png" alt="Viva Events Logo" class="logo-img small">
+
+          <img src="image/logo.png"
+               alt="Viva Events Logo"
+               class="logo-img small">
+
           <span>Viva Events</span>
+
         </div>
 
-        <button id="menuCloseBtn" class="menu-close" type="button">✕</button>
+        <button id="menuCloseBtn"
+                class="menu-close"
+                type="button"
+                aria-label="Close menu">
+
+          ✕
+
+        </button>
+
       </div>
 
+      <!-- LINKS -->
       <a href="index.html">Home</a>
+
       <a href="about.html">About</a>
+
       <a href="services.html">Services</a>
+
       <a href="packages.html">Packages</a>
+
       <a href="gallery.html">Gallery</a>
+
       <a href="contact.html">Contact</a>
+
       <a href="terms.html">Terms</a>
-      <a class="nav-mobile-cta" href="contact.html">Get Quote</a>
     </nav>
 
   </div>
+
 </header>
 
+<!-- MENU OVERLAY -->
 <div id="menuOverlay" class="menu-overlay"></div>
