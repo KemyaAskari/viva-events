@@ -1,0 +1,2284 @@
+/* ==========================================================
+   VIVA EVENTS SYDNEY
+   OFFICIAL SHARED COMPONENTS STYLESHEET
+
+   Designed & Developed by Kemya Askari
+   Website: https://vivaeventss.com.au
+   File: public/components.css
+   Version: 2.0
+
+   Copyright © 2026 Viva Events Sydney.
+   All Rights Reserved.
+   ========================================================== */
+
+
+/* ==========================================================
+   01. DESIGN TOKENS
+   ========================================================== */
+
+:root {
+  --vc-navy: #101e31;
+  --vc-navy-deep: #091625;
+  --vc-navy-light: #1b3048;
+
+  --vc-gold: #c5a16a;
+  --vc-gold-light: #ead5ae;
+  --vc-gold-dark: #886334;
+
+  --vc-cream: #faf7f0;
+  --vc-white: #ffffff;
+
+  --vc-text: #465568;
+  --vc-muted: #697789;
+  --vc-border: #e8e3da;
+
+  --vc-footer-text: #b9c3cf;
+  --vc-footer-muted: #a5b2c1;
+
+  --vc-font: "DM Sans", Arial, sans-serif;
+  --vc-heading: "Playfair Display", Georgia, serif;
+
+  --vc-container: 1280px;
+  --vc-footer-width: 1180px;
+
+  --vc-shadow: 0 14px 40px rgba(9, 22, 37, 0.12);
+  --vc-transition: 250ms ease;
+}
+
+
+/* ==========================================================
+   02. SHARED RESET AND UTILITIES
+   ========================================================== */
+
+#site-header,
+#site-footer {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#site-header *,
+#site-header *::before,
+#site-header *::after,
+#site-footer *,
+#site-footer *::before,
+#site-footer *::after,
+.cookie-consent *,
+.cookie-preferences *,
+.cookie-preferences-dialog * {
+  box-sizing: border-box;
+}
+
+#site-header a,
+#site-footer a {
+  text-decoration: none;
+}
+
+#site-header button,
+#site-footer button,
+.cookie-consent button,
+.cookie-preferences button,
+.cookie-preferences-dialog button {
+  font-family: var(--vc-font);
+}
+
+#site-header [hidden],
+#site-footer [hidden],
+.cookie-consent[hidden],
+.cookie-preferences[hidden],
+.cookie-preferences-dialog[hidden],
+.back-to-top[hidden] {
+  display: none !important;
+}
+
+.vc-container {
+  width: min(var(--vc-container), calc(100% - 48px));
+  margin-inline: auto;
+}
+
+.vc-sr-only,
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+
+/* ==========================================================
+   03. ACCESSIBILITY
+   ========================================================== */
+
+#site-header :focus-visible,
+#site-footer :focus-visible,
+.cookie-consent :focus-visible,
+.cookie-preferences :focus-visible,
+.cookie-preferences-dialog :focus-visible,
+.back-to-top:focus-visible {
+  outline: 3px solid var(--vc-gold);
+  outline-offset: 4px;
+}
+
+#site-header button:disabled,
+#site-footer button:disabled,
+.cookie-consent button:disabled,
+.cookie-preferences button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+/* ==========================================================
+   04. SHARED HEADER
+   ========================================================== */
+
+#site-header {
+  position: relative;
+  z-index: 1100;
+  overflow: visible;
+}
+
+#vivaSharedHeader {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  background: var(--vc-navy);
+  color: var(--vc-white);
+
+  border-bottom: 1px solid rgba(197, 161, 106, 0.25);
+
+  font-family: var(--vc-font);
+
+  box-shadow: 0 4px 24px rgba(9, 22, 37, 0.12);
+
+  transition: box-shadow var(--vc-transition);
+}
+
+#vivaSharedHeader.is-scrolled {
+  box-shadow: 0 8px 30px rgba(9, 22, 37, 0.2);
+}
+
+#vivaSharedHeader .ve-header-container {
+  width: min(var(--vc-container), calc(100% - 64px));
+  margin: 0 auto;
+}
+
+#vivaSharedHeader a {
+  text-decoration: none;
+}
+
+#vivaSharedHeader svg {
+  display: inline-block;
+  flex-shrink: 0;
+
+  width: 16px;
+  height: 16px;
+
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* ==========================================================
+   05. TOP CONTACT BAR
+   ========================================================== */
+
+#vivaSharedHeader .ve-topbar {
+  width: 100%;
+  background: var(--vc-navy-deep);
+  border-bottom: 1px solid rgba(197, 161, 106, 0.15);
+}
+
+#vivaSharedHeader .ve-topbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 38px;
+  gap: 20px;
+}
+
+#vivaSharedHeader .ve-topbar-message {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #aebbc9;
+
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  line-height: 1.5;
+}
+
+#vivaSharedHeader .ve-topbar-message svg {
+  width: 14px;
+  height: 14px;
+  color: var(--vc-gold);
+}
+
+#vivaSharedHeader .ve-topbar-contact {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 18px;
+}
+
+#vivaSharedHeader .ve-topbar-contact a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #dce3eb;
+
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.5;
+  white-space: nowrap;
+
+  transition: color var(--vc-transition);
+}
+
+#vivaSharedHeader .ve-topbar-contact a:hover {
+  color: var(--vc-gold-light);
+}
+
+#vivaSharedHeader .ve-topbar-contact svg {
+  width: 13px;
+  height: 13px;
+  color: var(--vc-gold);
+}
+
+#vivaSharedHeader .ve-topbar-divider {
+  display: block;
+  flex-shrink: 0;
+
+  width: 1px;
+  height: 13px;
+
+  background: rgba(197, 161, 106, 0.3);
+}
+
+
+/* ==========================================================
+   06. MAIN HEADER LAYOUT
+   ========================================================== */
+
+#vivaSharedHeader .ve-header-main {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 94px;
+  gap: 26px;
+  padding: 12px 0;
+}
+
+
+/* ==========================================================
+   07. BRAND AND LOGO
+   ========================================================== */
+
+#vivaSharedHeader .ve-brand {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+
+  min-width: 0;
+  gap: 13px;
+
+  color: var(--vc-white);
+}
+
+#vivaSharedHeader .ve-brand-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  width: 64px;
+  height: 64px;
+  padding: 4px;
+
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  border: 1px solid rgba(197, 161, 106, 0.35);
+  border-radius: 50%;
+
+  transition:
+    background-color var(--vc-transition),
+    border-color var(--vc-transition);
+}
+
+#vivaSharedHeader .ve-brand-mark img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+
+  margin: 0;
+
+  object-fit: contain;
+  object-position: center;
+
+  border-radius: 50%;
+}
+
+#vivaSharedHeader .ve-brand:hover .ve-brand-mark {
+  border-color: var(--vc-gold-light);
+  background: rgba(197, 161, 106, 0.08);
+}
+
+#vivaSharedHeader .ve-brand-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  min-width: 0;
+  gap: 5px;
+}
+
+#vivaSharedHeader .ve-brand-name {
+  display: block;
+  margin: 0;
+
+  color: var(--vc-gold-light);
+
+  font-family: var(--vc-heading);
+  font-size: 29px;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+  white-space: nowrap;
+}
+
+#vivaSharedHeader .ve-brand-subtitle {
+  display: block;
+  margin: 0;
+
+  color: #aebbc9;
+
+  font-family: var(--vc-font);
+  font-size: 9px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 1.8px;
+
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+
+/* ==========================================================
+   08. DESKTOP NAVIGATION
+   ========================================================== */
+
+#vivaSharedHeader .ve-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  min-width: 0;
+  gap: 24px;
+
+  margin: 0;
+  padding: 0;
+}
+
+#vivaSharedHeader .ve-nav-link {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+
+  padding: 13px 0;
+
+  color: #dce3eb;
+
+  font-family: var(--vc-font);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.5;
+  white-space: nowrap;
+
+  transition: color var(--vc-transition);
+}
+
+#vivaSharedHeader .ve-nav-link::after {
+  position: absolute;
+  right: 0;
+  bottom: 5px;
+  left: 0;
+
+  height: 1px;
+
+  background: var(--vc-gold);
+
+  content: "";
+
+  transform: scaleX(0);
+  transform-origin: center;
+
+  transition: transform var(--vc-transition);
+}
+
+#vivaSharedHeader .ve-nav-link:hover,
+#vivaSharedHeader .ve-nav-link.is-active,
+#vivaSharedHeader .ve-nav-link.active,
+#vivaSharedHeader .ve-nav-link[aria-current="page"] {
+  color: var(--vc-gold-light);
+}
+
+#vivaSharedHeader .ve-nav-link:hover::after,
+#vivaSharedHeader .ve-nav-link.is-active::after,
+#vivaSharedHeader .ve-nav-link.active::after,
+#vivaSharedHeader .ve-nav-link[aria-current="page"]::after {
+  transform: scaleX(1);
+}
+
+
+/* ==========================================================
+   09. REQUEST A QUOTE BUTTON
+   ========================================================== */
+
+#vivaSharedHeader .ve-nav-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  min-height: 45px;
+
+  gap: 10px;
+  margin-left: 4px;
+  padding: 12px 20px;
+
+  background: linear-gradient(
+    135deg,
+    #d8ba85,
+    #c5a16a
+  );
+
+  border: 1px solid var(--vc-gold);
+  border-radius: 6px;
+
+  color: var(--vc-navy-deep);
+
+  font-family: var(--vc-font);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.5;
+
+  white-space: nowrap;
+
+  box-shadow: 0 4px 14px rgba(197, 161, 106, 0.12);
+
+  transition:
+    background-color var(--vc-transition),
+    border-color var(--vc-transition),
+    box-shadow var(--vc-transition),
+    transform var(--vc-transition);
+}
+
+#vivaSharedHeader .ve-nav-cta svg {
+  width: 15px;
+  height: 15px;
+
+  stroke-width: 1.8;
+
+  transition: transform var(--vc-transition);
+}
+
+#vivaSharedHeader .ve-nav-cta:hover,
+#vivaSharedHeader .ve-nav-cta[aria-current="page"] {
+  background: var(--vc-gold-light);
+  border-color: var(--vc-gold-light);
+  color: var(--vc-navy-deep);
+
+  box-shadow: 0 6px 20px rgba(197, 161, 106, 0.22);
+}
+
+#vivaSharedHeader .ve-nav-cta:hover {
+  transform: translateY(-2px);
+}
+
+#vivaSharedHeader .ve-nav-cta:hover svg {
+  transform: translateX(3px);
+}
+
+
+/* ==========================================================
+   10. DROPDOWN NAVIGATION
+   ========================================================== */
+
+#vivaSharedHeader .nav-dropdown,
+#vivaSharedHeader [data-dropdown] {
+  position: relative;
+}
+
+#vivaSharedHeader .nav-dropdown-toggle,
+#vivaSharedHeader [data-dropdown-toggle] {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 12px 0;
+
+  border: 0;
+  background: transparent;
+  color: #dce3eb;
+
+  font-family: var(--vc-font);
+  font-size: 13px;
+  font-weight: 500;
+
+  cursor: pointer;
+}
+
+#vivaSharedHeader .nav-dropdown-toggle::after,
+#vivaSharedHeader [data-dropdown-toggle]::after {
+  width: 7px;
+  height: 7px;
+
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+
+  content: "";
+
+  transform: rotate(45deg);
+
+  transition: transform var(--vc-transition);
+}
+
+#vivaSharedHeader .nav-dropdown-toggle[aria-expanded="true"]::after,
+#vivaSharedHeader [data-dropdown-toggle][aria-expanded="true"]::after {
+  transform: rotate(225deg);
+}
+
+#vivaSharedHeader .nav-dropdown-menu,
+#vivaSharedHeader [data-dropdown-menu] {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1200;
+
+  display: none;
+  flex-direction: column;
+  align-items: stretch;
+
+  min-width: 220px;
+  gap: 3px;
+  padding: 10px;
+
+  background: var(--vc-navy-deep);
+
+  border: 1px solid rgba(197, 161, 106, 0.25);
+  border-radius: 8px;
+
+  box-shadow: var(--vc-shadow);
+}
+
+#vivaSharedHeader .nav-dropdown.is-open .nav-dropdown-menu,
+#vivaSharedHeader [data-dropdown].is-open [data-dropdown-menu],
+#vivaSharedHeader .nav-dropdown-toggle[aria-expanded="true"] + .nav-dropdown-menu,
+#vivaSharedHeader [data-dropdown-toggle][aria-expanded="true"] + [data-dropdown-menu] {
+  display: flex;
+}
+
+#vivaSharedHeader .nav-dropdown-menu a,
+#vivaSharedHeader [data-dropdown-menu] a {
+  display: block;
+
+  padding: 11px 14px;
+
+  color: #dce3eb;
+
+  font-size: 13px;
+  line-height: 1.5;
+  white-space: normal;
+
+  border-radius: 5px;
+}
+
+#vivaSharedHeader .nav-dropdown-menu a:hover,
+#vivaSharedHeader [data-dropdown-menu] a:hover {
+  background: rgba(197, 161, 106, 0.1);
+  color: var(--vc-gold-light);
+}
+
+#vivaSharedHeader .nav-dropdown-menu a::after,
+#vivaSharedHeader [data-dropdown-menu] a::after {
+  display: none;
+}
+
+
+/* ==========================================================
+   11. MOBILE MENU BUTTON
+   ========================================================== */
+
+#vivaSharedHeader .ve-menu-toggle {
+  position: relative;
+
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  width: 46px;
+  height: 46px;
+
+  gap: 5px;
+  margin: 0;
+  padding: 10px;
+
+  background: transparent;
+
+  border: 1px solid rgba(197, 161, 106, 0.5);
+  border-radius: 7px;
+
+  color: var(--vc-gold-light);
+
+  cursor: pointer;
+
+  transition:
+    background-color var(--vc-transition),
+    border-color var(--vc-transition);
+}
+
+#vivaSharedHeader .ve-menu-toggle:hover {
+  background: rgba(197, 161, 106, 0.1);
+  border-color: var(--vc-gold-light);
+}
+
+#vivaSharedHeader .ve-menu-toggle span {
+  display: block;
+  flex-shrink: 0;
+
+  width: 23px;
+  height: 2px;
+
+  margin: 0;
+
+  background: var(--vc-gold-light);
+
+  border-radius: 2px;
+
+  transition:
+    transform var(--vc-transition),
+    opacity var(--vc-transition);
+}
+
+#vivaSharedHeader .ve-menu-toggle[aria-expanded="true"]
+span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+#vivaSharedHeader .ve-menu-toggle[aria-expanded="true"]
+span:nth-child(2) {
+  opacity: 0;
+}
+
+#vivaSharedHeader .ve-menu-toggle[aria-expanded="true"]
+span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+#vivaSharedHeader .ve-mobile-contact {
+  display: none;
+}
+
+
+/* ==========================================================
+   12. SHARED FOOTER
+   ========================================================== */
+
+#site-footer {
+  position: relative;
+  z-index: 1;
+
+  background: var(--vc-navy-deep);
+  color: var(--vc-footer-text);
+}
+
+#vivaSharedFooter {
+  width: 100%;
+
+  margin: 0;
+  padding: 64px 0 0;
+
+  background: var(--vc-navy-deep);
+
+  border-top: 1px solid rgba(197, 161, 106, 0.25);
+
+  color: var(--vc-footer-text);
+
+  font-family: var(--vc-font);
+}
+
+#vivaSharedFooter .ve-footer-container {
+  width: min(
+    var(--vc-footer-width),
+    calc(100% - 64px)
+  );
+
+  margin: 0 auto;
+}
+
+
+/* ==========================================================
+   13. FOOTER COLUMN LAYOUT
+   ========================================================== */
+
+#vivaSharedFooter .ve-footer-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.25fr)
+    minmax(0, 0.75fr)
+    minmax(0, 1fr)
+    minmax(0, 1.15fr);
+
+  align-items: start;
+
+  gap: 35px;
+  padding-bottom: 42px;
+}
+
+#vivaSharedFooter .ve-footer-grid > * {
+  min-width: 0;
+}
+
+#vivaSharedFooter h2,
+#vivaSharedFooter h3,
+#vivaSharedFooter h4 {
+  position: relative;
+
+  margin: 0 0 20px;
+  padding-bottom: 13px;
+
+  color: var(--vc-gold-light);
+
+  font-family: var(--vc-heading);
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+#vivaSharedFooter h2::after,
+#vivaSharedFooter h3::after,
+#vivaSharedFooter h4::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 32px;
+  height: 1px;
+
+  background: var(--vc-gold);
+
+  content: "";
+}
+
+#vivaSharedFooter p {
+  margin: 0 0 15px;
+
+  color: var(--vc-footer-text);
+
+  font-family: var(--vc-font);
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+#vivaSharedFooter .ve-footer-note {
+  margin-top: 16px;
+
+  color: var(--vc-footer-muted);
+
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+
+/* ==========================================================
+   14. FOOTER LINKS
+   ========================================================== */
+
+#vivaSharedFooter .ve-footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 11px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+#vivaSharedFooter .ve-footer-links li {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+#vivaSharedFooter .ve-footer-links li::marker {
+  content: "";
+}
+
+#vivaSharedFooter a {
+  color: var(--vc-footer-text);
+
+  font-family: var(--vc-font);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.7;
+
+  text-decoration: none;
+
+  transition: color var(--vc-transition);
+}
+
+#vivaSharedFooter a:hover,
+#vivaSharedFooter a[aria-current="page"] {
+  color: var(--vc-gold-light);
+}
+
+#vivaSharedFooter .ve-footer-links a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+
+/* ==========================================================
+   15. FOOTER CONTACT DETAILS
+   ========================================================== */
+
+#vivaSharedFooter .ve-footer-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 13px;
+  margin-bottom: 20px;
+}
+
+#vivaSharedFooter .ve-footer-contact a {
+  display: flex;
+  align-items: flex-start;
+
+  max-width: 100%;
+  min-width: 0;
+
+  gap: 9px;
+
+  font-size: 13px;
+  line-height: 1.7;
+
+  overflow-wrap: anywhere;
+}
+
+#vivaSharedFooter .ve-footer-contact a span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+#vivaSharedFooter .ve-footer-contact svg {
+  display: inline-block;
+  flex-shrink: 0;
+
+  width: 16px;
+  height: 16px;
+
+  margin-top: 3px;
+
+  color: var(--vc-gold);
+
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* ==========================================================
+   16. FOOTER SOCIAL MEDIA
+   ========================================================== */
+
+#vivaSharedFooter .ve-footer-socials,
+#vivaSharedFooter .footer-socials,
+#vivaSharedFooter .footer-social-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 12px;
+  margin-top: 24px;
+}
+
+#vivaSharedFooter .ve-footer-socials a,
+#vivaSharedFooter .footer-socials a,
+#vivaSharedFooter .footer-social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  border: 1px solid rgba(197, 161, 106, 0.3);
+  border-radius: 50%;
+
+  color: var(--vc-gold-light);
+
+  transition:
+    background-color var(--vc-transition),
+    border-color var(--vc-transition),
+    transform var(--vc-transition);
+}
+
+#vivaSharedFooter .ve-footer-socials a:hover,
+#vivaSharedFooter .footer-socials a:hover,
+#vivaSharedFooter .footer-social-links a:hover {
+  background: rgba(197, 161, 106, 0.12);
+  border-color: var(--vc-gold);
+
+  transform: translateY(-3px);
+}
+
+
+/* ==========================================================
+   17. FOOTER COPYRIGHT AND DEVELOPER CREDIT
+   ========================================================== */
+
+#vivaSharedFooter .ve-footer-bottom {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    auto
+    minmax(0, 1fr);
+
+  align-items: center;
+
+  gap: 20px;
+
+  min-height: 78px;
+  padding: 23px 0;
+
+  border-top: 1px solid rgba(197, 161, 106, 0.22);
+
+  color: var(--vc-footer-muted);
+
+  font-family: var(--vc-font);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+#vivaSharedFooter .ve-footer-bottom > * {
+  min-width: 0;
+  margin: 0;
+}
+
+#vivaSharedFooter .ve-footer-copyright {
+  color: var(--vc-footer-muted);
+
+  font-family: var(--vc-font);
+  font-size: 12px;
+  font-weight: 400;
+  font-style: normal;
+
+  text-align: left;
+}
+
+#vivaSharedFooter .ve-footer-tagline {
+  color: var(--vc-gold);
+
+  font-family: var(--vc-heading);
+  font-size: 13px;
+  font-weight: 400;
+  font-style: italic;
+
+  text-align: center;
+}
+
+#vivaSharedFooter .ve-developer-credit {
+  display: block;
+
+  color: var(--vc-footer-text);
+
+  font-family: var(--vc-font);
+  font-size: 12px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.7;
+  letter-spacing: 0.2px;
+
+  text-align: right;
+}
+
+#vivaSharedFooter .ve-developer-credit strong {
+  color: var(--vc-gold-light);
+
+  font-family: var(--vc-font);
+  font-size: inherit;
+  font-weight: 600;
+  font-style: normal;
+
+  white-space: nowrap;
+}
+
+#vivaSharedFooter .ve-current-year {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+}
+
+
+/* ==========================================================
+   18. COOKIE CONSENT BANNER
+   ========================================================== */
+
+#cookie-consent.cookie-consent,
+.cookie-consent {
+  position: fixed;
+
+  right: 18px;
+  bottom: 18px;
+  bottom: max(18px, env(safe-area-inset-bottom));
+  left: 18px;
+
+  z-index: 5000;
+
+  width: auto;
+  max-width: 1180px;
+
+  margin: 0 auto;
+  padding: 0;
+
+  background: var(--vc-white);
+
+  border: 1px solid rgba(197, 161, 106, 0.4);
+  border-radius: 14px;
+
+  color: var(--vc-text);
+
+  font-family: var(--vc-font);
+
+  box-shadow: 0 18px 65px rgba(9, 22, 37, 0.22);
+}
+
+.cookie-consent-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+  padding: 25px 30px;
+}
+
+.cookie-consent-copy {
+  flex: 1;
+  min-width: 0;
+}
+
+.cookie-consent-copy strong,
+.cookie-consent-copy h2,
+.cookie-consent-copy h3 {
+  display: block;
+
+  margin: 0 0 8px;
+
+  color: var(--vc-navy);
+
+  font-family: var(--vc-heading);
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.cookie-consent-copy p {
+  margin: 0;
+
+  color: var(--vc-text);
+
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.cookie-consent-copy a,
+.cookie-consent p a {
+  color: var(--vc-gold-dark);
+
+  font-weight: 600;
+
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.cookie-consent-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+
+  gap: 10px;
+}
+
+
+/* ==========================================================
+   19. COOKIE CONSENT BUTTONS
+   ========================================================== */
+
+.cookie-button,
+#cookie-accept,
+#cookie-reject,
+#cookie-settings,
+#cookie-save {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 44px;
+  padding: 11px 17px;
+
+  border: 1px solid transparent;
+  border-radius: 6px;
+
+  font-family: var(--vc-font);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+
+  text-align: center;
+
+  cursor: pointer;
+
+  transition:
+    background-color var(--vc-transition),
+    color var(--vc-transition),
+    border-color var(--vc-transition);
+}
+
+.cookie-button-primary,
+#cookie-accept,
+#cookie-save {
+  background: var(--vc-navy);
+  border-color: var(--vc-navy);
+  color: var(--vc-white);
+}
+
+.cookie-button-primary:hover,
+#cookie-accept:hover,
+#cookie-save:hover {
+  background: var(--vc-navy-light);
+  border-color: var(--vc-navy-light);
+  color: var(--vc-white);
+}
+
+.cookie-button-outline,
+#cookie-reject,
+#cookie-settings {
+  background: var(--vc-white);
+  border-color: #cbd0d7;
+  color: var(--vc-navy);
+}
+
+.cookie-button-outline:hover,
+#cookie-reject:hover,
+#cookie-settings:hover {
+  background: var(--vc-cream);
+  border-color: var(--vc-gold);
+  color: var(--vc-navy);
+}
+
+
+/* ==========================================================
+   20. COOKIE PREFERENCES DIALOG
+   ========================================================== */
+
+.cookie-preferences-dialog,
+dialog#cookie-preferences {
+  position: fixed;
+  inset: 0;
+
+  width: min(560px, calc(100% - 32px));
+
+  max-height: calc(100vh - 32px);
+  max-height: calc(100dvh - 32px);
+
+  margin: auto;
+  padding: 30px;
+
+  overflow-y: auto;
+  overscroll-behavior: contain;
+
+  background: var(--vc-white);
+
+  border: 1px solid var(--vc-border);
+  border-radius: 16px;
+
+  color: var(--vc-text);
+
+  font-family: var(--vc-font);
+
+  box-shadow: 0 30px 80px rgba(9, 22, 37, 0.3);
+}
+
+dialog.cookie-preferences-dialog:not([open]),
+dialog#cookie-preferences:not([open]) {
+  display: none;
+}
+
+dialog.cookie-preferences-dialog::backdrop,
+dialog#cookie-preferences::backdrop {
+  background: rgba(9, 22, 37, 0.72);
+  backdrop-filter: blur(3px);
+}
+
+/* Support non-dialog cookie preference containers */
+
+#cookie-preferences:not(dialog) {
+  position: fixed;
+  inset: 0;
+
+  z-index: 5100;
+
+  display: grid;
+  place-items: center;
+
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  max-height: none;
+
+  margin: 0;
+  padding: 18px;
+
+  overflow-y: auto;
+
+  background: rgba(9, 22, 37, 0.72);
+
+  border: 0;
+  border-radius: 0;
+
+  backdrop-filter: blur(3px);
+}
+
+#cookie-preferences:not(dialog) .cookie-preferences-dialog,
+#cookie-preferences:not(dialog) .cookie-preferences-inner,
+#cookie-preferences:not(dialog) .cookie-preferences-panel {
+  position: relative;
+  inset: auto;
+
+  display: block;
+
+  width: min(560px, 100%);
+
+  max-height: calc(100vh - 36px);
+  max-height: calc(100dvh - 36px);
+
+  margin: 0;
+  padding: 28px;
+
+  overflow-y: auto;
+
+  background: var(--vc-white);
+
+  border: 1px solid var(--vc-border);
+  border-radius: 14px;
+
+  color: var(--vc-text);
+
+  box-shadow: var(--vc-shadow);
+}
+
+
+/* ==========================================================
+   21. COOKIE PREFERENCES CONTENT
+   ========================================================== */
+
+.cookie-preferences-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+  margin-bottom: 16px;
+}
+
+.cookie-preferences-header h2,
+#cookie-preferences h2 {
+  margin: 0;
+
+  color: var(--vc-navy);
+
+  font-family: var(--vc-heading);
+  font-size: 27px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+#cookie-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  min-width: 40px;
+  min-height: 40px;
+  padding: 8px;
+
+  background: var(--vc-cream);
+
+  border: 1px solid var(--vc-border);
+  border-radius: 8px;
+
+  color: var(--vc-navy);
+
+  font-size: 14px;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+#cookie-close:hover {
+  background: var(--vc-gold-light);
+}
+
+#cookie-preferences p {
+  color: var(--vc-text);
+
+  font-family: var(--vc-font);
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+#cookie-preferences .cookie-preference-item,
+#cookie-preferences .cookie-preference-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+  padding: 18px 0;
+
+  border-bottom: 1px solid var(--vc-border);
+}
+
+#cookie-preferences .cookie-preference-item strong,
+#cookie-preferences .cookie-preference-row strong {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: var(--vc-navy);
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#cookie-preferences .cookie-preference-item p,
+#cookie-preferences .cookie-preference-row p {
+  margin: 0;
+
+  color: var(--vc-muted);
+
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+#cookie-preferences input[type="checkbox"] {
+  width: 21px;
+  height: 21px;
+
+  flex-shrink: 0;
+
+  margin: 0;
+
+  accent-color: var(--vc-navy);
+
+  cursor: pointer;
+}
+
+#cookie-preferences input[type="checkbox"]:disabled {
+  cursor: not-allowed;
+}
+
+#cookie-preferences label {
+  cursor: pointer;
+}
+
+.cookie-preferences-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+
+  gap: 12px;
+  margin-top: 25px;
+}
+
+
+/* ==========================================================
+   22. BACK-TO-TOP BUTTON
+   ========================================================== */
+
+.back-to-top,
+[data-back-to-top] {
+  position: fixed;
+
+  right: 24px;
+  bottom: 24px;
+  bottom: max(24px, env(safe-area-inset-bottom));
+
+  z-index: 950;
+
+  display: grid;
+  place-items: center;
+
+  width: 48px;
+  height: 48px;
+
+  margin: 0;
+  padding: 0;
+
+  background: var(--vc-gold);
+
+  border: 1px solid var(--vc-gold);
+  border-radius: 50%;
+
+  color: var(--vc-navy);
+
+  font-size: 22px;
+  line-height: 1;
+
+  box-shadow: 0 8px 25px rgba(9, 22, 37, 0.18);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(12px);
+
+  cursor: pointer;
+
+  transition:
+    opacity var(--vc-transition),
+    visibility var(--vc-transition),
+    transform var(--vc-transition),
+    background-color var(--vc-transition);
+}
+
+.back-to-top svg,
+[data-back-to-top] svg {
+  width: 21px;
+  height: 21px;
+
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.back-to-top:hover,
+[data-back-to-top]:hover {
+  background: var(--vc-gold-light);
+  transform: translateY(-3px);
+}
+
+.back-to-top.is-visible,
+.back-to-top.show,
+.back-to-top.visible,
+[data-back-to-top].is-visible {
+  opacity: 1;
+  visibility: visible;
+
+  transform: translateY(0);
+}
+
+
+/* ==========================================================
+   23. LARGE DESKTOP SCREENS
+   ========================================================== */
+
+@media (min-width: 1500px) {
+
+  :root {
+    --vc-container: 1360px;
+    --vc-footer-width: 1280px;
+  }
+
+  #vivaSharedHeader .ve-header-main {
+    min-height: 100px;
+  }
+
+  #vivaSharedHeader .ve-nav {
+    gap: 29px;
+  }
+
+  #vivaSharedHeader .ve-nav-link {
+    font-size: 14px;
+  }
+
+  #vivaSharedFooter .ve-footer-grid {
+    gap: 45px;
+  }
+}
+
+
+/* ==========================================================
+   24. LAPTOP AND SMALL DESKTOP
+   ========================================================== */
+
+@media (max-width: 1250px) {
+
+  #vivaSharedHeader .ve-header-container {
+    width: calc(100% - 48px);
+  }
+
+  #vivaSharedHeader .ve-header-main {
+    gap: 18px;
+  }
+
+  #vivaSharedHeader .ve-nav {
+    gap: 15px;
+  }
+
+  #vivaSharedHeader .ve-nav-link {
+    font-size: 12px;
+  }
+
+  #vivaSharedHeader .ve-brand-name {
+    font-size: 26px;
+  }
+
+  #vivaSharedHeader .ve-brand-mark {
+    width: 58px;
+    height: 58px;
+  }
+
+  #vivaSharedHeader .ve-nav-cta {
+    padding-inline: 15px;
+  }
+
+  #vivaSharedFooter .ve-footer-grid {
+    gap: 28px;
+  }
+
+  #vivaSharedFooter .ve-footer-bottom {
+    gap: 15px;
+  }
+}
+
+
+/* ==========================================================
+   25. TABLET AND MOBILE NAVIGATION
+   Breakpoint must match components.js: 1100px
+   ========================================================== */
+
+@media (max-width: 1100px) {
+
+  #vivaSharedHeader .ve-header-main {
+    min-height: 85px;
+  }
+
+  #vivaSharedHeader .ve-menu-toggle {
+    display: inline-flex;
+  }
+
+  #vivaSharedHeader .ve-nav {
+    position: absolute;
+
+    top: calc(100% + 1px);
+    right: 0;
+    left: 0;
+
+    z-index: 1200;
+
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+
+    width: 100%;
+
+    max-height: calc(100vh - 145px);
+    max-height: calc(100dvh - 145px);
+
+    gap: 0;
+
+    margin: 0;
+    padding: 18px;
+
+    overflow-y: auto;
+    overscroll-behavior: contain;
+
+    background: var(--vc-navy-deep);
+
+    border: 1px solid rgba(197, 161, 106, 0.25);
+    border-top: 2px solid var(--vc-gold);
+    border-radius: 0 0 12px 12px;
+
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+  }
+
+  #vivaSharedHeader .ve-nav.is-open,
+  #vivaSharedHeader .ve-nav.open {
+    display: flex;
+  }
+
+  #vivaSharedHeader .ve-nav-link {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+
+    width: 100%;
+    min-height: 48px;
+
+    padding: 14px 16px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+
+    color: #dce3eb;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    white-space: normal;
+  }
+
+  #vivaSharedHeader .ve-nav-link::after {
+    display: none;
+  }
+
+  #vivaSharedHeader .ve-nav-link:hover,
+  #vivaSharedHeader .ve-nav-link.is-active,
+  #vivaSharedHeader .ve-nav-link.active,
+  #vivaSharedHeader .ve-nav-link[aria-current="page"] {
+    background: rgba(197, 161, 106, 0.09);
+
+    border-radius: 5px;
+
+    color: var(--vc-gold-light);
+  }
+
+  #vivaSharedHeader .ve-nav-cta {
+    width: 100%;
+    min-height: 48px;
+
+    margin: 18px 0 0;
+    padding: 13px 20px;
+
+    font-size: 13px;
+  }
+
+  #vivaSharedHeader .nav-dropdown,
+  #vivaSharedHeader [data-dropdown] {
+    width: 100%;
+    flex-shrink: 0;
+  }
+
+  #vivaSharedHeader .nav-dropdown-toggle,
+  #vivaSharedHeader [data-dropdown-toggle] {
+    width: 100%;
+    min-height: 48px;
+
+    justify-content: space-between;
+
+    padding: 14px 16px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  }
+
+  #vivaSharedHeader .nav-dropdown-menu,
+  #vivaSharedHeader [data-dropdown-menu] {
+    position: static;
+
+    width: 100%;
+    min-width: 0;
+
+    padding: 8px 10px;
+
+    background: var(--vc-navy-light);
+
+    border: 0;
+    border-radius: 5px;
+
+    box-shadow: none;
+  }
+
+  #vivaSharedHeader .ve-mobile-contact {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+
+    gap: 12px;
+
+    margin-top: 24px;
+    padding: 20px 10px 5px;
+
+    border-top: 1px solid rgba(197, 161, 106, 0.2);
+  }
+
+  #vivaSharedHeader .ve-mobile-contact-title {
+    color: var(--vc-gold-light);
+
+    font-family: var(--vc-heading);
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  #vivaSharedHeader .ve-mobile-contact a {
+    display: flex;
+    align-items: center;
+
+    min-width: 0;
+    gap: 10px;
+
+    color: #aebbc9;
+
+    font-size: 13px;
+    line-height: 1.6;
+
+    overflow-wrap: anywhere;
+  }
+
+  #vivaSharedHeader .ve-mobile-contact a span {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  #vivaSharedHeader .ve-mobile-contact a:hover {
+    color: var(--vc-gold-light);
+  }
+
+  #vivaSharedHeader .ve-mobile-contact svg {
+    width: 15px;
+    height: 15px;
+
+    color: var(--vc-gold);
+  }
+
+  .cookie-consent-inner {
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 20px;
+  }
+
+  .cookie-consent-actions {
+    justify-content: flex-start;
+  }
+}
+
+
+/* ==========================================================
+   26. TABLET FOOTER
+   ========================================================== */
+
+@media (max-width: 900px) {
+
+  #vivaSharedFooter {
+    padding-top: 48px;
+  }
+
+  #vivaSharedFooter .ve-footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 35px;
+    padding-bottom: 35px;
+  }
+
+  #vivaSharedFooter .ve-footer-bottom {
+    grid-template-columns: minmax(0, 1fr);
+
+    justify-items: center;
+
+    gap: 10px;
+    padding: 25px 0;
+
+    text-align: center;
+  }
+
+  #vivaSharedFooter .ve-footer-copyright,
+  #vivaSharedFooter .ve-footer-tagline,
+  #vivaSharedFooter .ve-developer-credit {
+    text-align: center;
+  }
+}
+
+
+/* ==========================================================
+   27. TABLET SCREENS
+   ========================================================== */
+
+@media (max-width: 768px) {
+
+  .vc-container,
+  #vivaSharedHeader .ve-header-container,
+  #vivaSharedFooter .ve-footer-container {
+    width: calc(100% - 40px);
+  }
+
+  #vivaSharedHeader .ve-topbar-inner {
+    justify-content: center;
+    min-height: 34px;
+  }
+
+  #vivaSharedHeader .ve-topbar-message {
+    display: none;
+  }
+
+  #vivaSharedHeader .ve-topbar-contact {
+    justify-content: center;
+    gap: 14px;
+  }
+
+  #vivaSharedHeader .ve-topbar-contact a {
+    font-size: 11px;
+  }
+
+  .cookie-consent-inner {
+    padding: 22px;
+  }
+
+  .cookie-consent-actions {
+    justify-content: stretch;
+  }
+
+  .cookie-consent-actions button {
+    flex: 1;
+  }
+
+  .cookie-preferences-dialog,
+  dialog#cookie-preferences {
+    padding: 24px;
+  }
+}
+
+
+/* ==========================================================
+   28. MOBILE PHONES
+   ========================================================== */
+
+@media (max-width: 600px) {
+
+  .vc-container,
+  #vivaSharedHeader .ve-header-container,
+  #vivaSharedFooter .ve-footer-container {
+    width: calc(100% - 32px);
+  }
+
+  #vivaSharedHeader .ve-header-main {
+    min-height: 76px;
+
+    gap: 12px;
+    padding: 10px 0;
+  }
+
+  #vivaSharedHeader .ve-brand {
+    gap: 10px;
+  }
+
+  #vivaSharedHeader .ve-brand-mark {
+    width: 50px;
+    height: 50px;
+    padding: 3px;
+  }
+
+  #vivaSharedHeader .ve-brand-name {
+    font-size: 24px;
+  }
+
+  #vivaSharedHeader .ve-brand-subtitle {
+    font-size: 8px;
+    letter-spacing: 1.1px;
+  }
+
+  #vivaSharedHeader .ve-brand-text {
+    gap: 4px;
+  }
+
+  #vivaSharedHeader .ve-menu-toggle {
+    width: 44px;
+    height: 44px;
+  }
+
+  #vivaSharedHeader .ve-menu-toggle span {
+    width: 21px;
+  }
+
+  #vivaSharedHeader .ve-nav {
+    padding: 14px;
+  }
+
+  #vivaSharedHeader .ve-topbar-contact {
+    gap: 10px;
+  }
+
+  #vivaSharedHeader .ve-topbar-contact a {
+    gap: 5px;
+    font-size: 10px;
+  }
+
+  #vivaSharedHeader .ve-topbar-contact svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  /* Footer */
+
+  #vivaSharedFooter {
+    padding-top: 36px;
+  }
+
+  #vivaSharedFooter .ve-footer-grid {
+    grid-template-columns: minmax(0, 1fr);
+
+    gap: 25px;
+    padding-bottom: 28px;
+  }
+
+  #vivaSharedFooter .ve-footer-grid > *:not(:last-child) {
+    padding-bottom: 22px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+  }
+
+  #vivaSharedFooter h2,
+  #vivaSharedFooter h3,
+  #vivaSharedFooter h4 {
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+
+  #vivaSharedFooter .ve-footer-links {
+    gap: 10px;
+  }
+
+  #vivaSharedFooter .ve-footer-bottom {
+    gap: 9px;
+    padding: 22px 0 28px;
+  }
+
+  #vivaSharedFooter .ve-developer-credit {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  /* Cookie banner */
+
+  #cookie-consent.cookie-consent,
+  .cookie-consent {
+    right: 10px;
+    bottom: 10px;
+    bottom: max(10px, env(safe-area-inset-bottom));
+    left: 10px;
+
+    max-height: calc(100vh - 24px);
+    max-height: calc(100dvh - 24px);
+
+    overflow-y: auto;
+
+    border-radius: 12px;
+  }
+
+  .cookie-consent-inner {
+    padding: 18px;
+    gap: 16px;
+  }
+
+  .cookie-consent-copy strong,
+  .cookie-consent-copy h2,
+  .cookie-consent-copy h3 {
+    font-size: 19px;
+  }
+
+  .cookie-consent-copy p {
+    font-size: 12px;
+  }
+
+  .cookie-consent-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 9px;
+  }
+
+  .cookie-consent-actions button {
+    width: 100%;
+    min-height: 44px;
+
+    padding: 10px 8px;
+
+    font-size: 12px;
+  }
+
+  #cookie-accept {
+    grid-column: 1 / -1;
+  }
+
+  /* Cookie preferences */
+
+  .cookie-preferences-dialog,
+  dialog#cookie-preferences {
+    width: calc(100% - 24px);
+    padding: 20px;
+  }
+
+  #cookie-preferences:not(dialog) {
+    padding: 12px;
+  }
+
+  #cookie-preferences:not(dialog) .cookie-preferences-dialog,
+  #cookie-preferences:not(dialog) .cookie-preferences-inner,
+  #cookie-preferences:not(dialog) .cookie-preferences-panel {
+    padding: 20px;
+  }
+
+  .cookie-preferences-header h2,
+  #cookie-preferences h2 {
+    font-size: 23px;
+  }
+
+  .cookie-preferences-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cookie-preferences-actions button {
+    width: 100%;
+  }
+
+  /* Back to top */
+
+  .back-to-top,
+  [data-back-to-top] {
+    right: 15px;
+    bottom: 15px;
+    bottom: max(15px, env(safe-area-inset-bottom));
+
+    width: 44px;
+    height: 44px;
+  }
+}
+
+
+/* ==========================================================
+   29. SMALL MOBILE PHONES
+   ========================================================== */
+
+@media (max-width: 400px) {
+
+  .vc-container,
+  #vivaSharedHeader .ve-header-container,
+  #vivaSharedFooter .ve-footer-container {
+    width: calc(100% - 24px);
+  }
+
+  #vivaSharedHeader .ve-brand-mark {
+    width: 45px;
+    height: 45px;
+  }
+
+  #vivaSharedHeader .ve-brand-name {
+    font-size: 22px;
+  }
+
+  #vivaSharedHeader .ve-brand-subtitle {
+    font-size: 7px;
+    letter-spacing: 0.9px;
+  }
+
+  #vivaSharedHeader .ve-topbar-contact {
+    gap: 8px;
+  }
+
+  #vivaSharedHeader .ve-topbar-contact a {
+    font-size: 11px;
+  }
+
+  /* Email remains available in the mobile menu */
+
+  #vivaSharedHeader .ve-topbar-contact a[href^="mailto:"] {
+    display: none;
+  }
+
+  #vivaSharedHeader .ve-topbar-divider {
+    display: none;
+  }
+
+  #vivaSharedHeader .ve-nav {
+    padding: 10px;
+  }
+
+  #vivaSharedFooter .ve-footer-copyright {
+    font-size: 11px;
+  }
+
+  #vivaSharedFooter .ve-footer-tagline {
+    font-size: 12px;
+  }
+
+  #vivaSharedFooter .ve-developer-credit {
+    font-size: 12px;
+  }
+}
+
+
+/* ==========================================================
+   30. VERY SMALL PHONES
+   ========================================================== */
+
+@media (max-width: 360px) {
+
+  #vivaSharedHeader .ve-brand {
+    gap: 8px;
+  }
+
+  #vivaSharedHeader .ve-brand-name {
+    font-size: 20px;
+  }
+
+  #vivaSharedHeader .ve-brand-mark {
+    width: 42px;
+    height: 42px;
+  }
+
+  #vivaSharedHeader .ve-brand-subtitle {
+    font-size: 7px;
+    letter-spacing: 0.6px;
+  }
+
+  .cookie-consent-actions {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  #cookie-accept {
+    grid-column: auto;
+  }
+}
+
+
+/* ==========================================================
+   31. SHORT MOBILE AND LANDSCAPE SCREENS
+   ========================================================== */
+
+@media (max-width: 1100px) and (max-height: 450px) {
+
+  #vivaSharedHeader .ve-nav {
+    max-height: calc(100vh - 130px);
+    max-height: calc(100dvh - 130px);
+  }
+
+  .cookie-consent-inner {
+    gap: 12px;
+    padding: 15px;
+  }
+}
+
+
+/* ==========================================================
+   32. REDUCED MOTION ACCESSIBILITY
+   ========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  #site-header *,
+  #site-header *::before,
+  #site-header *::after,
+  #site-footer *,
+  #site-footer *::before,
+  #site-footer *::after,
+  .cookie-consent *,
+  .cookie-preferences *,
+  .cookie-preferences-dialog *,
+  .back-to-top,
+  [data-back-to-top] {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+
+  #vivaSharedHeader .ve-nav-cta:hover,
+  #vivaSharedHeader .ve-nav-cta:hover svg,
+  #vivaSharedFooter .ve-footer-socials a:hover,
+  #vivaSharedFooter .footer-socials a:hover,
+  #vivaSharedFooter .footer-social-links a:hover,
+  .back-to-top:hover,
+  [data-back-to-top]:hover {
+    transform: none;
+  }
+}
+
+
+/* ==========================================================
+   33. PRINT STYLES
+   ========================================================== */
+
+@media print {
+
+  #site-header,
+  .cookie-consent,
+  .cookie-preferences,
+  .cookie-preferences-dialog,
+  .back-to-top,
+  [data-back-to-top] {
+    display: none !important;
+  }
+
+  #site-footer,
+  #vivaSharedFooter {
+    background: #ffffff !important;
+    color: #000000 !important;
+
+    box-shadow: none !important;
+  }
+
+  #vivaSharedFooter h2,
+  #vivaSharedFooter h3,
+  #vivaSharedFooter h4,
+  #vivaSharedFooter p,
+  #vivaSharedFooter a,
+  #vivaSharedFooter span,
+  #vivaSharedFooter strong {
+    color: #000000 !important;
+  }
+
+  #vivaSharedFooter .ve-footer-bottom {
+    border-top: 1px solid #cccccc;
+  }
+}
+
+
+/* ==========================================================
+   END OF COMPONENTS.CSS
+
+   Designed & Developed by Kemya Askari
+   Viva Events Sydney
+   ========================================================== */
